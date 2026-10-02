@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gpmfactory.fr/sitemap.xml
+Sitemap: https://test.gpmfactory.com/sitemap.xml
