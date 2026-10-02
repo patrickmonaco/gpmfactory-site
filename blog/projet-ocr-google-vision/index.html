@@ -1,0 +1,644 @@
+<!doctype html><html lang=en class=no-js>
+<head>
+<script src=/js/critical.bundle.399c4138abc75303a6bff242ed2180522e22bb15d98644943a0d4379551de6b6.js integrity="sha256-OZxBOKvHUwOmv/JC7SGAUi4iuxXZhkSUOg1DeVUd5rY=" crossorigin=anonymous></script><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=generator content="Hugo 0.166.0">
+<meta name=theme content="Hinode 3.20.0">
+<link rel=stylesheet href="/css/main.min.c994f7d86a7d59348dcc977addcde72a6a4c0e1209917060ac62b2c8789bc1da.css" integrity="sha256-yZT32Gp9WTSNzJd63c3nKmpMDhIJkXBgrGKyyHibwdo=" crossorigin=anonymous>
+<link rel=preload href=/fonts/inter-v12-latin-regular.woff2 as=font type=font/woff2 crossorigin>
+<meta name=robots content="index, follow">
+<meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<title>Projet OCR avec Google Vision - Hinode </title>
+<meta name=description content="Objet Le projet commence avec un objectif : numériser et extraire le contenu d’une centaine documents d’archives militaires d’Indochine, datant des an...">
+<link rel=canonical href=https://gpmfactory.fr/blog/projet-ocr-google-vision/>
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Projet OCR avec Google Vision">
+<meta property="og:description" content="Objet Le projet commence avec un objectif : numériser et extraire le contenu d’une centaine documents d’archives militaires d’Indochine, datant des an...">
+<meta property="og:url" content="https://gpmfactory.fr/blog/projet-ocr-google-vision/">
+<meta property="og:site_name" content="Hinode">
+<meta property="article:published_time" content="2025-12-15T00:00:00+00:00">
+<meta property="article:modified_time" content="2026-10-02T18:38:29+02:00">
+<meta property="og:image" content="https://gpmfactory.fr/img/logo1280x640.png">
+<meta property="og:image:alt" content="Projet OCR avec Google Vision">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="Projet OCR avec Google Vision">
+<meta name=twitter:description content="Objet Le projet commence avec un objectif : numériser et extraire le contenu d’une centaine documents d’archives militaires d’Indochine, datant des an...">
+<meta name=twitter:image content="https://gpmfactory.fr/img/logo1280x640.png">
+<meta name=twitter:image:alt content="Projet OCR avec Google Vision">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://gpmfactory.fr/#/schema/organization/1","name":"Hinode","url":"https://gpmfactory.fr/","sameAs":[null,"https://github.com/gethinode/hinode"],"logo":{"@type":"ImageObject","@id":"https://gpmfactory.fr/#/schema/image/1","url":"https://gpmfactory.fr/img/logo512x512.png","width":512,"height":512,"caption":"Hinode"},"image":{"@id":"https://gpmfactory.fr/#/schema/image/1"}},{"@type":"WebSite","@id":"https://gpmfactory.fr/#/schema/website/1","url":"https://gpmfactory.fr/","name":"Hinode","description":"Hinode is a clean documentation and blog theme for your Hugo site based on Bootstrap 5.","publisher":{"@id":"https://gpmfactory.fr/#/schema/organization/1"}},{"@type":"WebPage","@id":"https://gpmfactory.fr/blog/projet-ocr-google-vision/","url":"https://gpmfactory.fr/blog/projet-ocr-google-vision/","name":"Projet OCR avec Google Vision","description":"","isPartOf":{"@id":"https://gpmfactory.fr/#/schema/website/1"},"about":{"@id":"https://gpmfactory.fr/#/schema/organization/1"},"datePublished":"2025-12-15T00:00:00CET","dateModified":"2026-10-02T18:38:29CET","breadcrumb":{"@id":"https://gpmfactory.fr/blog/projet-ocr-google-vision/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"https://gpmfactory.fr/blog/projet-ocr-google-vision/#/schema/image/2"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://gpmfactory.fr/blog/projet-ocr-google-vision/"]}]},{"@type":"BreadcrumbList","@id":"https://gpmfactory.fr/blog/projet-ocr-google-vision/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://gpmfactory.fr/","url":"https://gpmfactory.fr/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://gpmfactory.fr/blog/","url":"https://gpmfactory.fr/blog/","name":"Blogs"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://gpmfactory.fr/blog/projet-ocr-google-vision/","url":"https://gpmfactory.fr/blog/projet-ocr-google-vision/","name":"Projet OCR avec Google Vision"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://gpmfactory.fr/#/schema/article/1","headline":"Projet OCR avec Google Vision","description":"","isPartOf":{"@id":"https://gpmfactory.fr/blog/projet-ocr-google-vision/"},"mainEntityOfPage":{"@id":"https://gpmfactory.fr/blog/projet-ocr-google-vision/"},"datePublished":"2025-12-15T00:00:00CET","dateModified":"2026-10-02T18:38:29CET","author":{"@id":"https://gpmfactory.fr/#/schema/person/2"},"publisher":{"@id":"https://gpmfactory.fr/#/schema/organization/1"},"image":{"@id":"https://gpmfactory.fr/blog/projet-ocr-google-vision/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://gpmfactory.fr/#/schema/person/2","name":"Mark Dumay","sameAs":["https://www.linkedin.com/in/markdumay/","https://github.com/markdumay"]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"https://gpmfactory.fr/blog/projet-ocr-google-vision/#/schema/image/2","url":"https://gpmfactory.fr/img/logo1280x640.png","contentUrl":"https://gpmfactory.fr/img/logo1280x640.png","caption":"Projet OCR avec Google Vision"}]}]}</script>
+<link rel=icon type=image/png sizes=16x16 href=/img/favicon_hu_20390864c1ea8166.png>
+<link rel=icon type=image/png sizes=32x32 href=/img/favicon_hu_441a82b0ee77b71a.png>
+<link rel=icon type=image/png sizes=48x48 href=/img/favicon_hu_bc65e60dd19ccab0.png>
+<link rel=apple-touch-icon sizes=180x180 href=/img/favicon_hu_82a7f8b4f0d2c027.png>
+</head><body class=navbar-fixed>
+<div class="container-fluid fixed-top p-0">
+<nav class="navbar px-4 py-4 navbar-fs-6 navbar-md-fs
+bg-body navbar-fixed-top navbar-expand-md">
+<div class="container-xxl p-0">
+<div class="d-flex navbar-container">
+<div class="d-flex align-items-center">
+<button class="navbar-toggler collapsed p-0 mx-auto invisible fw-30" type=button>
+<svg class="svg-inline--fa fas fa-ellipsis fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fas-ellipsis"/></svg></button></div>
+<div class="w-100 d-flex align-items-center w-md-auto">
+<a class="navbar-brand mx-auto" href=/ aria-label=Home>
+<img class="img-fluid m-auto" src=/img/logo_icon.svg height=30 width=30 alt=Hinode></a>
+</div>
+<div class="d-flex align-items-center">
+<button class="navbar-toggler main-nav-toggler collapsed p-0" type=button data-bs-toggle=collapse data-bs-target=#navbar-0-collapse aria-controls=navbar-0 aria-expanded=false aria-label="Toggle main navigation">
+<span class="toggler-icon top-bar emphasis"></span>
+<span class="toggler-icon middle-bar emphasis"></span>
+<span class="toggler-icon bottom-bar emphasis"></span>
+</button>
+</div>
+</div>
+<div class="navbar-collapse collapse" id=navbar-0-collapse>
+<div class="d-flex flex-fill ms-md-3 mt-4 mt-md-0 me-md-3">
+<form class="search flex-fill position-relative me-auto">
+<input class="search-input form-control is-search" type=search placeholder="Search this site" aria-label="Search this site" autocomplete=off name=search-input>
+<div class="search-suggestions shadow bg-body rounded d-none" data-no-results="No results for"></div>
+</form>
+</div>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class=nav-item>
+<a class=nav-link data-nav=main data-nav-main=home href=/><span class=d-md-none>Home</span>
+<span class="d-none d-md-block">Home</span>
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link data-nav=main data-nav-main=tags href=/tags><span class=d-md-none>Tags</span>
+<span class="d-none d-md-block">Tags</span>
+</a>
+</li>
+<li class="nav-link navbar-fs-6 navbar-md-fs d-flex mode-switch align-items-center" id=navbar-mode>
+<input type=checkbox class="checkbox navbar-mode-selector" id=navbar-mode-checkbox aria-label="Toggle theme">
+<label class=label for=navbar-mode-checkbox>
+<svg class="svg-inline--fa fas fa-sun fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-sun"/></svg>
+<svg class="svg-inline--fa fas fa-moon fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-moon"/></svg>
+<div class=ball></div>
+</label>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<main id=container class=main>
+<div class="container-xxl flex-fill py-4 px-4 px-xxl-0">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+<div class="col col-lg-2 d-none d-lg-block sidebar-overflow sticky-top p-0">
+</div>
+<div class="col-12 col-md-9 col-lg-8 mb-5">
+<header>
+<nav aria-label=breadcrumb class=d-sm-none>
+<ol class=breadcrumb>
+<li class=breadcrumb-item>
+<a href=/blog/>
+<svg class="svg-inline--fa fas fa-angle-left" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 256 512" overflow="visible"><use href="#fas-angle-left"/></svg>&nbsp;&nbsp;Blogs
+</a>
+</li></ol>
+</nav>
+<nav aria-label=breadcrumb class="d-none d-sm-block">
+<ol class=breadcrumb>
+<li class=breadcrumb-item><a href=/>Home</a></li>
+<li class=breadcrumb-item><a href=/blog/>Blogs</a></li><li class="breadcrumb-item active" aria-current=page>
+Projet OCR avec Google Vision
+</li>
+</ol>
+</nav>
+<h1 id=projet-ocr-avec-google-vision class="display-4 pt-1">Projet OCR avec Google Vision</h1>
+<small class="text-body-secondary text-uppercase">
+Last modified on October 2, 2026
+&bull;
+6&nbsp;min read
+&bull;
+1,068&nbsp;words
+</small>
+<div class="py-3 d-flex align-items-center">
+<span class="hstack gap-2 text-body-secondary">
+<a aria-label="Share via LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://gpmfactory.fr/blog/projet-ocr-google-vision/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-linkedin fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-linkedin"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via Twitter" href="https://twitter.com/home?status=https://gpmfactory.fr/blog/projet-ocr-google-vision/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-x-twitter fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-x-twitter"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via Facebook" href="https://www.facebook.com/sharer.php?u=https://gpmfactory.fr/blog/projet-ocr-google-vision/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-facebook fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fab-facebook"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via WhatsApp" href="whatsapp://send?text=Projet+OCR+avec+Google+Vision%20https://gpmfactory.fr/blog/projet-ocr-google-vision/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-whatsapp fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-whatsapp"/></svg>
+</span>
+</span></a>
+<div id=toast-message-email-4 class=toast role=alert aria-live=assertive aria-atomic=true>
+<div class=toast-header>
+<strong class=me-auto>Hinode</strong>
+<button type=button class=btn-close data-bs-dismiss=toast aria-label=Close></button>
+</div>
+<div class=toast-body>Link copied to clipboard</div>
+</div>
+<a aria-label="Share via email" data-toast-target=toast-message-email-4 data-clipboard=https://gpmfactory.fr/blog/projet-ocr-google-vision/ class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fas fa-link fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via system" class="btn btn-primary position-relative btn-social p-0" data-sharing-description data-sharing-title="Projet OCR avec Google Vision" data-sharing-url=https://gpmfactory.fr/blog/projet-ocr-google-vision/ role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fas fa-share-nodes fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-share-nodes"/></svg>
+</span>
+</span></a>
+</span></div>
+</header>
+<div class="d-md-none pb-5">
+<div class="d-grid gap-2 mx-auto">
+<a href=#toc-collapse class="btn btn-outline-secondary position-relative toc-button" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse role=button>
+<span class="d-flex justify-content-between">
+<span class=my-auto>On this page</span>
+<span class="align-self-center ps-1">
+<svg class="svg-inline--fa fas fa-sort" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512" overflow="visible"><use href="#fas-sort"/></svg>
+</span>
+</span></a>
+</div>
+<div class="collapse border bg-body-tertiary rounded p-1 navbar-nav-scroll" id=toc-collapse>
+<small>
+<div class="toc toc-panel text-body p-2">
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#objet>Objet</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-1-les-premiers-pas-avec-google-cloud-vision>Phase 1 : Les Premiers Pas avec Google Cloud Vision</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-2-le-casse-tête-du-colonage>Phase 2 : Le Casse-Tête du Colonage</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-3-la-reconnaissance-des-dates>Phase 3 : La Reconnaissance des Dates</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-4-le-prétraitement-imagemagick>Phase 4 : Le Prétraitement ImageMagick</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-5-le-problème-de-lorientation>Phase 5 : Le Problème de l&rsquo;Orientation</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-6-lenfer-de-lencodage-windows>Phase 6 : L&rsquo;Enfer de l&rsquo;Encodage Windows</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-7-la-grande-simplification-adieu-nodejs>Phase 7 : La Grande Simplification - Adieu Node.js</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-8-lautomatisation-par-lot>Phase 8 : L&rsquo;Automatisation par Lot</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#scripts-développés>Scripts développés :</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#le-workflow-final>Le workflow final :</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#les-défis-techniques-surmontés>Les Défis Techniques Surmontés</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#1-détection-de-structure>1. Détection de Structure</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#2-polyvalence-des-formats>2. Polyvalence des Formats</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#3-qualité-variable>3. Qualité Variable</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#4-encodage-cross-platform>4. Encodage Cross-Platform</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#5-simplicité-d>5. Simplicité d&rsquo;Usage</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#les-leçons-apprises>Les Leçons Apprises</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#technique>Technique</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#méthodologie>Méthodologie</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#le-résultat-final>Le Résultat Final</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#pour-aller-plus-loin>Pour Aller Plus Loin</a>
+</div>
+</small>
+</div>
+</div>
+<h2 id=objet class=heading>Objet<a href=#objet aria-labelledby=objet>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Le projet commence avec un objectif : numériser et extraire le contenu d&rsquo;une centaine <strong>documents d&rsquo;archives militaires d&rsquo;Indochine</strong>, datant des années 1950. Ces documents dactylographiés présentent une structure particulière en <strong>deux colonnes</strong> : dates à gauche, événements à droite.</p>
+<p>Le défi ? Ces documents vieillissants ont plus de 70 ans. Le papier a jauni, l&rsquo;encre s&rsquo;est estompée, et la qualité de la frappe varie. Impossible de simplement &ldquo;scanner et extraire&rdquo; - il faut un véritable pipeline de traitement.</p>
+<h2 id=phase-1-les-premiers-pas-avec-google-cloud-vision class=heading>Phase 1 : Les Premiers Pas avec Google Cloud Vision<a href=#phase-1-les-premiers-pas-avec-google-cloud-vision aria-labelledby=phase-1-les-premiers-pas-avec-google-cloud-vision>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Le choix se porte sur <strong>Google Cloud Vision API</strong>, connu pour sa précision sur les documents complexes. Le premier script <code>vision.py</code> naît avec deux optimisations cruciales :</p>
+<p>python</p>
+<div class="codeblock syntax-highlight mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>response = client.document_text_detection(
+</span></span><span class=line><span class=cl>    image=image,
+</span></span><span class=line><span class=cl>    image_context={&#34;language_hints&#34;: [&#34;fr&#34;]}
+</span></span><span class=line><span class=cl>)</span></span></code></pre></div></div><ul>
+<li>
+<p><code>document_text_detection</code> : optimisé pour les documents structurés</p>
+</li>
+<li>
+<p><code>language_hints: ["fr"]</code> : essentiel pour les accents français (é, è, ç, etc.)</p>
+</li>
+</ul>
+<h2 id=phase-2-le-casse-tête-du-colonage class=heading>Phase 2 : Le Casse-Tête du Colonage<a href=#phase-2-le-casse-t%c3%aate-du-colonage aria-labelledby=phase-2-le-casse-tête-du-colonage>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Le premier obstacle sérieux apparaît : comment <strong>apparier intelligemment</strong> les dates et leur contenu correspondant ?</p>
+<p>Les documents ont une structure claire visuellement, mais l&rsquo;OCR retourne un flux désordonné de paragraphes. La solution ? Un algorithme d&rsquo;<strong>appariement par proximité verticale</strong> :</p>
+<p>python</p>
+<div class="codeblock syntax-highlight mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>def smart_pair_dates_content(dates, content_items):
+</span></span><span class=line><span class=cl>    # Pour chaque date, trouver le contenu le plus proche en Y
+</span></span><span class=line><span class=cl>    # Préserver l&#39;ordre topologique du document
+</span></span><span class=line><span class=cl>    # Fusionner les paragraphes orphelins</span></span></code></pre></div></div><p>Ce système :</p>
+<ul>
+<li>
+<p>Trie tous les éléments par position verticale (Y)</p>
+</li>
+<li>
+<p>Apparie chaque date avec le contenu le plus proche</p>
+</li>
+<li>
+<p>Fusionne les paragraphes sans date avec le paragraphe précédent</p>
+</li>
+<li>
+<p>Préserve l&rsquo;ordre chronologique du document original</p>
+</li>
+</ul>
+<h2 id=phase-3-la-reconnaissance-des-dates class=heading>Phase 3 : La Reconnaissance des Dates<a href=#phase-3-la-reconnaissance-des-dates aria-labelledby=phase-3-la-reconnaissance-des-dates>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Un nouveau problème surgit : les dates prennent <strong>plusieurs formats</strong> selon les documents :</p>
+<ul>
+<li>
+<p><code>1° Novembre</code> (format original attendu)</p>
+</li>
+<li>
+<p><code>14.11.1955</code> (format numérique)</p>
+</li>
+<li>
+<p><code>Novembre 1955</code></p>
+</li>
+<li>
+<p><code>1955</code> (année seule)</p>
+</li>
+</ul>
+<p>La fonction <code>is_date()</code> évolue pour détecter tous ces formats via regex :</p>
+<p>python</p>
+<div class="codeblock syntax-highlight mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>patterns = [
+</span></span><span class=line><span class=cl>    r&#39;\d{1,2}\s*°?\s*(?:Janvier|Février|...)&#39;,  # Texte
+</span></span><span class=line><span class=cl>    r&#39;\d{1,2}[\./-]\d{1,2}[\./-]\d{4}&#39;,         # 14.11.1955
+</span></span><span class=line><span class=cl>    r&#39;^\d{4}$&#39;,                                   # 1955
+</span></span><span class=line><span class=cl>]</span></span></code></pre></div></div>
+<h2 id=phase-4-le-prétraitement-imagemagick class=heading>Phase 4 : Le Prétraitement ImageMagick<a href=#phase-4-le-pr%c3%a9traitement-imagemagick aria-labelledby=phase-4-le-prétraitement-imagemagick>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Pour les documents particulièrement dégradés, l&rsquo;OCR seul ne suffit pas. Entre en jeu <strong>ImageMagick</strong> avec 6 prétraitements différents :</p>
+<ol>
+<li>
+<p><strong>Baseline</strong> : contraste + netteté standard</p>
+</li>
+<li>
+<p><strong>Aggressive</strong> : contraste fort pour papier jauni</p>
+</li>
+<li>
+<p><strong>Denoise</strong> : réduction du bruit pour vieilles frappes</p>
+</li>
+<li>
+<p><strong>Enhance</strong> : netteté maximale</p>
+</li>
+<li>
+<p><strong>Threshold</strong> : binarisation pour documents très clairs/foncés</p>
+</li>
+<li>
+<p><strong>Optimal</strong> : combinaison équilibrée</p>
+</li>
+</ol>
+<p>Le script <code>batch_imagemagick.py</code> permet de tester visuellement quelle version donne les meilleurs résultats OCR. On utilise majoritairement l&rsquo;option <em>Denoise</em></p>
+<h2 id=phase-5-le-problème-de-lorientation class=heading>Phase 5 : Le Problème de l&rsquo;Orientation<a href=#phase-5-le-probl%c3%a8me-de-lorientation aria-labelledby=phase-5-le-problème-de-lorientation>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Surprise : certains documents ont été scannés dans le mauvais sens ! Ils ont été redressés manuellement. les métadonnées EXIF indiquent la rotation, mais Cloud Vision les ignore.</p>
+<p>Solution : <code>check_orientation.py</code> qui :</p>
+<ul>
+<li>
+<p>Lit les métadonnées EXIF</p>
+</li>
+<li>
+<p>Effectue une rotation physique de l&rsquo;image</p>
+</li>
+<li>
+<p>Peut générer 4 versions (0°, 90°, 180°, 270°) pour tester</p>
+</li>
+</ul>
+<h2 id=phase-6-lenfer-de-lencodage-windows class=heading>Phase 6 : L&rsquo;Enfer de l&rsquo;Encodage Windows<a href=#phase-6-lenfer-de-lencodage-windows aria-labelledby=phase-6-lenfer-de-lencodage-windows>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Le vrai cauchemar technique : les <strong>problèmes d&rsquo;encodage</strong>. Sur Windows, les scripts Python utilisent par défaut cp1252, mais :</p>
+<ul>
+<li>
+<p>Les emojis dans les messages (✅ ❌ 🔍) sont en UTF-8</p>
+</li>
+<li>
+<p>Les accents français nécessitent UTF-8</p>
+</li>
+<li>
+<p>Les appels <code>subprocess</code> mélangent les encodages</p>
+</li>
+</ul>
+<p>La bataille fait rage ligne par ligne :</p>
+<ul>
+<li>
+<p>Suppression de tous les emojis : ✅ → <code>[OK]</code></p>
+</li>
+<li>
+<p>Caractères spéciaux : ° → <code>degres</code>, Δ → <code>d</code></p>
+</li>
+<li>
+<p>Force UTF-8 dans subprocess : <code>encoding='utf-8', errors='replace'</code></p>
+</li>
+<li>
+<p>Force UTF-8 dans les scripts : <code>sys.stdout = io.TextIOWrapper(...)</code></p>
+</li>
+</ul>
+<h2 id=phase-7-la-grande-simplification-adieu-nodejs class=heading>Phase 7 : La Grande Simplification - Adieu Node.js<a href=#phase-7-la-grande-simplification-adieu-nodejs aria-labelledby=phase-7-la-grande-simplification-adieu-nodejs>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Un tournant majeur : la génération des fichiers Word utilisait <strong>Node.js + docx</strong> via subprocess. Une dépendance de trop.</p>
+<p>Refactorisation complète. <strong>115 lignes de code JavaScript éliminées</strong>, remplacées par du Python pur :</p>
+<p>python</p>
+<div class="codeblock syntax-highlight mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>from docx import Document
+</span></span><span class=line><span class=cl>doc = Document()
+</span></span><span class=line><span class=cl>table = doc.add_table(rows=len(data), cols=2)
+</span></span><span class=line><span class=cl># Supprimer les bordures, formater, sauvegarder
+</span></span><span class=line><span class=cl>doc.save(output_file)</span></span></code></pre></div></div>
+<h2 id=phase-8-lautomatisation-par-lot class=heading>Phase 8 : L&rsquo;Automatisation par Lot<a href=#phase-8-lautomatisation-par-lot aria-labelledby=phase-8-lautomatisation-par-lot>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Avec 118 documents, le traitement manuel est impensable. Naissance du <strong>pipeline batch</strong> :</p>
+<h3 id=scripts-développés class=heading>Scripts développés :<a href=#scripts-d%c3%a9velopp%c3%a9s aria-labelledby=scripts-développés>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<ol>
+<li>
+<p><strong>batch_orientation.py</strong> : Corrige l&rsquo;orientation de toutes les images</p>
+</li>
+<li>
+<p><strong>batch_imagemagick.py</strong> : Applique le prétraitement optimal à tous les documents</p>
+</li>
+<li>
+<p><strong>batch_ocr.bat</strong> : Lance l&rsquo;OCR sur tout un dossier</p>
+</li>
+<li>
+<p><strong>remove_oriented.py</strong> : Nettoie les noms de fichiers</p>
+</li>
+<li>
+<p><strong>merge_word_simple.py</strong> : Fusionne tous les Word en un seul document</p>
+</li>
+</ol>
+<h3 id=le-workflow-final class=heading>Le workflow final :<a href=#le-workflow-final aria-labelledby=le-workflow-final>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>bash</p>
+<div class="codeblock syntax-highlight mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl># 1. Prétraitement (si nécessaire)
+</span></span><span class=line><span class=cl>python batch_imagemagick.py Archives/ --tests 6 --output Archives_clean/
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># 2. Correction orientation
+</span></span><span class=line><span class=cl>python batch_orientation.py Archives_clean/ --fix
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># 3. Nettoyage noms
+</span></span><span class=line><span class=cl>python remove_oriented.py Archives_clean/
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># 4. OCR massif
+</span></span><span class=line><span class=cl>batch_ocr.bat Archives_clean/ Resultats/
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># 5. Fusion finale
+</span></span><span class=line><span class=cl>python merge_word_simple.py Resultats/ Legion_Indochine_1950s.docx</span></span></code></pre></div></div><p>Un seul document Word final : <strong>118 documents d&rsquo;archives structurés, searchable, exploitables</strong>.</p>
+<h2 id=les-défis-techniques-surmontés class=heading>Les Défis Techniques Surmontés<a href=#les-d%c3%a9fis-techniques-surmont%c3%a9s aria-labelledby=les-défis-techniques-surmontés>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<h3 id=1-détection-de-structure class=heading>1. <strong>Détection de Structure</strong><a href=#1-d%c3%a9tection-de-structure aria-labelledby=1-détection-de-structure>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>Transformer un flux OCR désordonné en paires date-contenu cohérentes via analyse géométrique.</p>
+<h3 id=2-polyvalence-des-formats class=heading>2. <strong>Polyvalence des Formats</strong><a href=#2-polyvalence-des-formats aria-labelledby=2-polyvalence-des-formats>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>Gérer 7+ formats de dates différents dans les mêmes documents.</p>
+<h3 id=3-qualité-variable class=heading>3. <strong>Qualité Variable</strong><a href=#3-qualit%c3%a9-variable aria-labelledby=3-qualité-variable>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>Des documents de 70 ans, jaunis, estompés → prétraitement ImageMagick adaptatif.</p>
+<h3 id=4-encodage-cross-platform class=heading>4. <strong>Encodage Cross-Platform</strong><a href=#4-encodage-cross-platform aria-labelledby=4-encodage-cross-platform>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>Le grand boss final : faire cohabiter UTF-8, cp1252, emojis, accents français, subprocess Python et batch Windows.</p>
+<h3 id=5-simplicité-d class=heading>5. <strong>Simplicité d&rsquo;Usage</strong><a href=#5-simplicit%c3%a9-d aria-labelledby=5-simplicité-d>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>118 documents × 5 étapes = <strong>trop complexe</strong>. Solution : scripts batch qui enchaînent tout automatiquement.</p>
+<h2 id=les-leçons-apprises class=heading>Les Leçons Apprises<a href=#les-le%c3%a7ons-apprises aria-labelledby=les-leçons-apprises>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<h3 id=technique class=heading>Technique<a href=#technique aria-labelledby=technique>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<ol>
+<li>
+<p><strong>Less is More</strong> : Éliminer Node.js a simplifié tout le projet</p>
+</li>
+<li>
+<p><strong>UTF-8 Everywhere</strong> : Sur Windows, forcer UTF-8 partout évite 90% des problèmes</p>
+</li>
+<li>
+<p><strong>Tester d&rsquo;Abord</strong> : Les 6 variantes ImageMagick permettent de choisir visuellement avant de tout traiter</p>
+</li>
+<li>
+<p><strong>Chemins Absolus</strong> : Dans les scripts batch, toujours utiliser <code>__file__</code> pour les chemins</p>
+</li>
+</ol>
+<h3 id=méthodologie class=heading>Méthodologie<a href=#m%c3%a9thodologie aria-labelledby=méthodologie>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<ol>
+<li>
+<p>Mise en place de la team:</p>
+<ul>
+<li>
+<p>Patrick pour les spécifications et les tests</p>
+</li>
+<li>
+<p>Claude <em>Anthropic</em> pour la réalisation</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Itération</strong> : Le projet a évolué sur plusieurs jours, chaque problème amenant sa solution</p>
+</li>
+<li>
+<p><strong>Feedback Utilisateur</strong> : &ldquo;Ça ne marche pas&rdquo; → Debug → Correction → &ldquo;Maintenant ça marche !&rdquo;</p>
+</li>
+<li>
+<p><strong>Pragmatisme</strong> : Abandonner les solutions complexes (NODE_PATH, npx) pour des solutions simples (python-docx direct)</p>
+</li>
+</ol>
+<h2 id=le-résultat-final class=heading>Le Résultat Final<a href=#le-r%c3%a9sultat-final aria-labelledby=le-résultat-final>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p><strong>De :</strong> 118 images JPEG de documents jaunis, mal orientés, difficilement lisibles</p>
+<p><strong>À :</strong> Un document Word de 300+ pages, structuré, searchable, avec :</p>
+<ul>
+<li>
+<p>Toutes les dates correctement identifiées</p>
+</li>
+<li>
+<p>Le contenu associé à chaque date</p>
+</li>
+<li>
+<p>Les paragraphes fusionnés intelligemment</p>
+</li>
+<li>
+<p>Un format exploitable pour la recherche historique</p>
+</li>
+</ul>
+<p><strong>Technologies utilisées :</strong></p>
+<ul>
+<li>
+<p>Python 3.12</p>
+</li>
+<li>
+<p>Google Cloud Vision API</p>
+</li>
+<li>
+<p>python-docx</p>
+</li>
+<li>
+<p>ImageMagick</p>
+</li>
+<li>
+<p>PIL (Pillow)</p>
+</li>
+<li>
+<p>Regex pour la détection de dates</p>
+</li>
+</ul>
+<p><strong>Lignes de code :</strong> ~2000 lignes Python + batch scripts</p>
+<p><strong>Temps de traitement :</strong> ~15 minutes pour 118 documents (avec prétraitement)</p>
+<h2 id=pour-aller-plus-loin class=heading>Pour Aller Plus Loin<a href=#pour-aller-plus-loin aria-labelledby=pour-aller-plus-loin>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Le code complet est modulaire et réutilisable pour d&rsquo;autres projets d&rsquo;archives : registres d&rsquo;état civil, journaux de bord militaires, correspondances historiques, etc.</p>
+<div class="row row-cols-2 mt-5 mb-3">
+<div class=col><a class=page-nav-prev href=/blog/projet-global-apogee-de-psa-demonstrateur-wcc/>
+<span class=visually-hidden>Previous page:&nbsp;</span>
+<svg class="svg-inline--fa fas fa-arrow-left" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-arrow-left"/></svg>&nbsp;Projet Global APOGEE de PSA - Demonstrateur WCC
+</a></div>
+<div class="col text-end"><a class=page-nav-next href=/blog/propagation-didentite-entre-webcenter-portal-et-des-wsrp-producer/>
+<span class=visually-hidden>Next page:&nbsp;</span>Propagation d'identité entre WebCenter Portal et des WSRP Producer&nbsp;
+<svg class="svg-inline--fa fas fa-arrow-right" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-arrow-right"/></svg>
+</a></div>
+</div>
+</div>
+<div class="col col-md-3 col-lg-2 d-none d-md-block">
+<div class="toc toc-sidebar mb-5 my-md-0 mb-lg-5 pb-3 text-body-secondary sticky-top">
+<h2 class="h6 fw-bold lh-base mt-0 mb-2" id=toc-heading>On this page</h2>
+<nav class=toc aria-labelledby=toc-heading>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#objet>Objet</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-1-les-premiers-pas-avec-google-cloud-vision>Phase 1 : Les Premiers Pas avec Google Cloud Vision</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-2-le-casse-tête-du-colonage>Phase 2 : Le Casse-Tête du Colonage</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-3-la-reconnaissance-des-dates>Phase 3 : La Reconnaissance des Dates</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-4-le-prétraitement-imagemagick>Phase 4 : Le Prétraitement ImageMagick</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-5-le-problème-de-lorientation>Phase 5 : Le Problème de l&rsquo;Orientation</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-6-lenfer-de-lencodage-windows>Phase 6 : L&rsquo;Enfer de l&rsquo;Encodage Windows</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-7-la-grande-simplification-adieu-nodejs>Phase 7 : La Grande Simplification - Adieu Node.js</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#phase-8-lautomatisation-par-lot>Phase 8 : L&rsquo;Automatisation par Lot</a>
+<a href=#toc-collapse-items id=btnTOCShowMore class="btn btn-link link-primary position-relative toc-item" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse-items role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Show 13 more</span>
+</span></a>
+<div class=collapse id=toc-collapse-items>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#scripts-développés>Scripts développés :</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#le-workflow-final>Le workflow final :</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#les-défis-techniques-surmontés>Les Défis Techniques Surmontés</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#1-détection-de-structure>1. <strong>Détection de Structure</strong></a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#2-polyvalence-des-formats>2. <strong>Polyvalence des Formats</strong></a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#3-qualité-variable>3. <strong>Qualité Variable</strong></a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#4-encodage-cross-platform>4. <strong>Encodage Cross-Platform</strong></a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#5-simplicité-d>5. <strong>Simplicité d’Usage</strong></a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#les-leçons-apprises>Les Leçons Apprises</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#technique>Technique</a>
+<a class="toc-item toc-level-2" href=/blog/projet-ocr-google-vision/#méthodologie>Méthodologie</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#le-résultat-final>Le Résultat Final</a>
+<a class="toc-item toc-level-1" href=/blog/projet-ocr-google-vision/#pour-aller-plus-loin>Pour Aller Plus Loin</a>
+&nbsp;
+<a href=#toc-collapse-items id=btnTOCShowLess class="btn btn-link link-primary position-relative toc-item" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse-items role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Show less</span>
+</span></a>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</main><div class="container-fluid bg-primary bg-opacity-10">
+<div class="container-xxl px-4 px-xxl-0">
+<div class="row row-cols-2 py-3 align-items-center">
+<div class="col col-6">
+<div class="row justify-content-end p-0">
+<div class="col-12 col-md-8 p-0">
+<div class="fs-3 fw-bold">Follow me</div>
+<p>I work on everything coding and tweet developer memes</p>
+</div>
+</div>
+</div>
+<div class="col col-6 text-sm-start">
+<a href=https://linkedin.com/ aria-label=LinkedIn class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-linkedin fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-linkedin"/></svg>&nbsp;
+</a>
+<a href=https://github.com/ aria-label=GitHub class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-github fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fab-github"/></svg>&nbsp;
+</a>
+<a href=https://medium.com/ aria-label=Medium class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-medium fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-medium"/></svg>&nbsp;
+</a>
+</div>
+</div>
+</div>
+</div>
+<footer class="container-fluid footer text-center p-3">
+<div class="container-xxl text-center">
+<small>
+Copyright © 2022 - 2026 Hinode Team.
+|
+Powered by
+<a href=https://gethinode.com class=link-bg-footer>Hinode</a>
+</small>
+</div>
+</footer><div id=toast-container class="toast-container position-fixed bottom-0 end-0 p-3">
+<div id=toast-copied-code-message class=toast role=alert aria-live=assertive aria-atomic=true>
+<div class=toast-header>
+<strong class=me-auto>Hinode</strong>
+<button type=button class=btn-close data-bs-dismiss=toast aria-label=Close></button>
+</div>
+<div class=toast-body>Code copied to clipboard</div>
+</div>
+</div>
+<dialog class=lightbox aria-label="Enlarged view">
+<button type=button class=lightbox-close aria-label=Close>
+<svg class="svg-inline--fa fas fa-xmark fa-fw fa-xl" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512" overflow="visible"><use href="#fas-xmark"/></svg></button>
+<div class=lightbox-content></div>
+</dialog>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" display="none"><symbol id="fab-facebook" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M512 256C512 114.6 397.4.0 256 0S0 114.6.0 256C0 376 82.7 476.8 194.2 504.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2.0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></symbol><symbol id="fab-github" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5.0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5.0S0 115.5.0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5.0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21z"/></symbol><symbol id="fab-linkedin" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3V447.7C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3C448 46.5 433.6 32 416 32zM135.4 416H69V202.2h66.5V416h-.1zM102.2 96a38.5 38.5.0 110 77 38.5 38.5.0 110-77zM384.3 416h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></symbol><symbol id="fab-medium" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M369.4 32c43.4.0 78.6 35.2 78.6 78.6v83.8c-1.9-.1-3.8-.2-5.7-.2h-.4c-10 0-22.3 2.4-31.1 6.8-10 4.6-18.7 11.5-26 20.6-11.8 14.6-18.9 34.3-20.6 56.4-.1.7-.1 1.3-.2 2s-.1 1.2-.1 1.9c-.1 1.2-.1 2.4-.1 3.6.0 1.9-.1 3.8.0 5.8 1.2 50.1 28.2 90.2 76.3 90.2 2.7.0 5.3-.1 7.9-.4v20.4c0 43.4-35.2 78.6-78.6 78.6L78.6 480C35.2 480 0 444.8.0 401.4V110.6C0 67.2 35.2 32 78.6 32h290.8zM82.3 138.9l.3.1c13.2 3 19.8 7.4 19.8 23.4v187.2c0 16-6.7 20.4-19.9 23.4l-.3.1v2.8H135v-2.8l-.3-.1c-13.2-3-19.9-7.4-19.9-23.4V173.3l86.1 202.5h4.9l88.6-208.2v186.6c-1.1 12.6-7.8 16.5-19.7 19.2l-.3.1v2.7h91.9v-2.7l-.3-.1c-11.9-2.7-18.7-6.6-19.9-19.2l-.1-191.8h.1c0-16 6.7-20.4 19.9-23.4l.3-.1v-2.7h-72.2l-67 157.4-67-157.4H82.3v2.7zM448 340.3c-25.1-7.4-43-35.1-41.2-67.8h41.1v67.8zm-6.4-135.6c2.3.0 4.4.3 6.4.9V263h-40.2c1.5-33.6 13.6-57.9 33.8-58.3z"/></symbol><symbol id="fab-whatsapp" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4.0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3.0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2.0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2.0-101.7 82.8-184.5 184.6-184.5 49.3.0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></symbol><symbol id="fab-x-twitter" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8L168.7 275.5-5.2 48H140.4L240.9 180.9 357.2 48zM332.4 421.8h39.1L119.1 88h-42l255.3 333.8z"/></symbol><symbol id="fas-angle-left" overflow="visible" viewBox="0 0 256 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8.0 45.3l160 160c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0l-160 160z"/></symbol><symbol id="fas-arrow-left" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8.0 45.3l160 160c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L109.3 288H480c17.7.0 32-14.3 32-32s-14.3-32-32-32H109.3l105.4-105.4c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0l-160 160z"/></symbol><symbol id="fas-arrow-right" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8.0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3.0s-12.5 32.8.0 45.3L402.7 224H32c-17.7.0-32 14.3-32 32s14.3 32 32 32h370.7L297.3 393.4c-12.5 12.5-12.5 32.8.0 45.3s32.8 12.5 45.3.0l160-160z"/></symbol><symbol id="fas-ellipsis" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M0 256a56 56 0 11112 0A56 56 0 110 256zm168 0a56 56 0 11112 0 56 56 0 11-112 0zm224-56a56 56 0 110 112 56 56 0 110-112z"/></symbol><symbol id="fas-link" overflow="visible" viewBox="0 0 576 512"><path fill="currentColor" d="M419.5 96c-16.6.0-32.7 4.5-46.8 12.7-15.8-16-34.2-29.4-54.5-39.5 28.2-24 64.1-37.2 101.3-37.2C505.9 32 576 102 576 188.5c0 41.5-16.5 81.3-45.8 110.6l-71.1 71.1C429.8 399.5 390 416 348.5 416 262.1 416 192 346 192 259.5c0-1.5.0-3 .1-4.5.5-17.7 15.2-31.6 32.9-31.1s31.6 15.2 31.1 32.9c0 .9.0 1.8.0 2.6.0 51.1 41.4 92.5 92.5 92.5 24.5.0 48-9.7 65.4-27.1l71.1-71.1c17.3-17.3 27.1-40.9 27.1-65.4.0-51.1-41.4-92.5-92.5-92.5zM275.2 173.3c-1.9-.8-3.8-1.9-5.5-3.1-12.6-6.5-27-10.2-42.1-10.2-24.5.0-48 9.7-65.4 27.1L91.1 258.2C73.8 275.5 64 299.1 64 323.6c0 51.1 41.4 92.5 92.5 92.5 16.5.0 32.6-4.4 46.7-12.6 15.8 16 34.2 29.4 54.6 39.5-28.2 23.9-64 37.2-101.3 37.2C70.1 480.2.0 410.2.0 323.7c0-41.5 16.5-81.3 45.8-110.6l71.1-71.1c29.3-29.3 69.1-45.8 110.6-45.8 86.6.0 156.5 70.6 156.5 156.9.0 1.3.0 2.6.0 3.9-.4 17.7-15.1 31.6-32.8 31.2s-31.6-15.1-31.2-32.8c0-.8.0-1.5.0-2.3.0-33.7-18-63.3-44.8-79.6z"/></symbol><symbol id="fas-moon" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6.0.0 114.6.0 256S114.6 512 256 512c68.8.0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9.4-9.8.6-14.8.6-101.6.0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4S322.6 8.5 312.7 6.3C294.4 2.2 275.4.0 256 0z"/></symbol><symbol id="fas-share-nodes" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M384 192c53 0 96-43 96-96S437 0 384 0s-96 43-96 96c0 5.4.5 10.8 1.3 16L159.6 184.1c-16.9-15-39.2-24.1-63.6-24.1-53 0-96 43-96 96s43 96 96 96c24.4.0 46.6-9.1 63.6-24.1L289.3 4e2c-.9 5.2-1.3 10.5-1.3 16 0 53 43 96 96 96s96-43 96-96-43-96-96-96c-24.4.0-46.6 9.1-63.6 24.1L190.7 272c.9-5.2 1.3-10.5 1.3-16s-.5-10.8-1.3-16l129.7-72.1c16.9 15 39.2 24.1 63.6 24.1z"/></symbol><symbol id="fas-sort" overflow="visible" viewBox="0 0 384 512"><path fill="currentColor" d="M2.4 204.2C7.4 216.2 19 224 32 224h320c12.9.0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-160-160c-12.5-12.5-32.8-12.5-45.3.0l-160 160c-9.2 9.2-11.9 22.9-6.9 34.9zm0 103.5c-5 12-2.2 25.7 6.9 34.9l160 160c12.5 12.5 32.8 12.5 45.3.0l160-160c9.2-9.2 11.9-22.9 6.9-34.9S364.9 288 352 288H32c-12.9.0-24.6 7.8-29.6 19.8z"/></symbol><symbol id="fas-sun" overflow="visible" viewBox="0 0 576 512"><path fill="currentColor" d="M288-32c8.4.0 16.3 4.4 20.6 11.7l55.5 92.6L468.9 46c8.2-2 16.9.4 22.8 6.3S5e2 67 498 75.1l-26.3 104.7 92.7 55.5c7.2 4.3 11.7 12.2 11.7 20.6s-4.4 16.3-11.7 20.6l-92.7 55.6L498 436.8c2 8.2-.4 16.9-6.3 22.8S477 468 468.9 466l-104.7-26.3-55.5 92.7c-4.3 7.2-12.2 11.7-20.6 11.7s-16.3-4.4-20.6-11.7L211.9 439.7 107.2 466c-8.2 2-16.8-.4-22.8-6.3S76 445 78 436.8l26.2-104.7-92.6-55.5C4.4 272.2.0 264.4.0 256s4.4-16.3 11.7-20.6l92.6-55.5L78 75.1c-2-8.2.3-16.8 6.3-22.8S99 44 107.2 46l104.7 26.2 55.5-92.6 1.8-2.6c4.5-5.7 11.4-9.1 18.8-9.1zm0 144a144 144 0 100 288 144 144 0 100-288zm0 240a96 96 0 110-192 96 96 0 110 192z"/></symbol><symbol id="fas-xmark" overflow="visible" viewBox="0 0 384 512"><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3.0s-12.5 32.8.0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8.0 45.3s32.8 12.5 45.3.0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0L192.5 210.7 55.1 73.4z"/></symbol></svg>
+<script src=/js/core.bundle.en.378f11853928e62e422b122cf3fb703f2ebb80d353451c2c8ec304d70a125bfc.js integrity="sha256-N48RhTko5i5CKxIs8/twPy67gNNTRRwsjsME1woSW/w=" crossorigin=anonymous defer></script>
+<script src=/js/core.bundle.en.a00f94c296574cfee65e112d82eb3b22b3a4afb097b9f59787a25d401459cdd9.mjs type=module integrity="sha256-oA+UwpZXTP7mXhEtgus7IrOkr7CXufWXh6JdQBRZzdk=" crossorigin=anonymous defer></script></body>
+</html>

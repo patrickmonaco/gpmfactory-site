@@ -1,0 +1,533 @@
+<!doctype html><html lang=en class=no-js>
+<head>
+<script src=/js/critical.bundle.399c4138abc75303a6bff242ed2180522e22bb15d98644943a0d4379551de6b6.js integrity="sha256-OZxBOKvHUwOmv/JC7SGAUi4iuxXZhkSUOg1DeVUd5rY=" crossorigin=anonymous></script><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=generator content="Hugo 0.166.0">
+<meta name=theme content="Hinode 3.20.0">
+<link rel=stylesheet href="/css/main.min.c994f7d86a7d59348dcc977addcde72a6a4c0e1209917060ac62b2c8789bc1da.css" integrity="sha256-yZT32Gp9WTSNzJd63c3nKmpMDhIJkXBgrGKyyHibwdo=" crossorigin=anonymous>
+<link rel=preload href=/fonts/inter-v12-latin-regular.woff2 as=font type=font/woff2 crossorigin>
+<meta name=robots content="index, follow">
+<meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<title>Form Builder Tool for Oracle APEX - Hinode </title>
+<meta name=description content="Last revision: 27 sept 2022
+The purpose of this project is to give to business users a no-code tool for generating forms.
+...">
+<link rel=canonical href=https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/>
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Form Builder Tool for Oracle APEX">
+<meta property="og:description" content="Last revision: 27 sept 2022
+The purpose of this project is to give to business users a no-code tool for generating forms.
+...">
+<meta property="og:url" content="https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/">
+<meta property="og:site_name" content="Hinode">
+<meta property="article:published_time" content="2022-09-27T00:00:00+00:00">
+<meta property="article:modified_time" content="2026-10-02T18:38:29+02:00">
+<meta property="og:image" content="https://gpmfactory.fr/img/logo1280x640.png">
+<meta property="og:image:alt" content="Form Builder Tool for Oracle APEX">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="Form Builder Tool for Oracle APEX">
+<meta name=twitter:description content="Last revision: 27 sept 2022
+The purpose of this project is to give to business users a no-code tool for generating forms.
+...">
+<meta name=twitter:image content="https://gpmfactory.fr/img/logo1280x640.png">
+<meta name=twitter:image:alt content="Form Builder Tool for Oracle APEX">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://gpmfactory.fr/#/schema/organization/1","name":"Hinode","url":"https://gpmfactory.fr/","sameAs":[null,"https://github.com/gethinode/hinode"],"logo":{"@type":"ImageObject","@id":"https://gpmfactory.fr/#/schema/image/1","url":"https://gpmfactory.fr/img/logo512x512.png","width":512,"height":512,"caption":"Hinode"},"image":{"@id":"https://gpmfactory.fr/#/schema/image/1"}},{"@type":"WebSite","@id":"https://gpmfactory.fr/#/schema/website/1","url":"https://gpmfactory.fr/","name":"Hinode","description":"Hinode is a clean documentation and blog theme for your Hugo site based on Bootstrap 5.","publisher":{"@id":"https://gpmfactory.fr/#/schema/organization/1"}},{"@type":"WebPage","@id":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/","url":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/","name":"Form Builder Tool for Oracle APEX","description":"","isPartOf":{"@id":"https://gpmfactory.fr/#/schema/website/1"},"about":{"@id":"https://gpmfactory.fr/#/schema/organization/1"},"datePublished":"2022-09-27T00:00:00CET","dateModified":"2026-10-02T18:38:29CET","breadcrumb":{"@id":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/#/schema/image/2"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/"]}]},{"@type":"BreadcrumbList","@id":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://gpmfactory.fr/","url":"https://gpmfactory.fr/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://gpmfactory.fr/blog/","url":"https://gpmfactory.fr/blog/","name":"Blogs"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/","url":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/","name":"Form Builder Tool for Oracle APEX"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://gpmfactory.fr/#/schema/article/1","headline":"Form Builder Tool for Oracle APEX","description":"","isPartOf":{"@id":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/"},"mainEntityOfPage":{"@id":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/"},"datePublished":"2022-09-27T00:00:00CET","dateModified":"2026-10-02T18:38:29CET","author":{"@id":"https://gpmfactory.fr/#/schema/person/2"},"publisher":{"@id":"https://gpmfactory.fr/#/schema/organization/1"},"image":{"@id":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://gpmfactory.fr/#/schema/person/2","name":"Mark Dumay","sameAs":["https://www.linkedin.com/in/markdumay/","https://github.com/markdumay"]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/#/schema/image/2","url":"https://gpmfactory.fr/img/logo1280x640.png","contentUrl":"https://gpmfactory.fr/img/logo1280x640.png","caption":"Form Builder Tool for Oracle APEX"}]}]}</script>
+<link rel=icon type=image/png sizes=16x16 href=/img/favicon_hu_20390864c1ea8166.png>
+<link rel=icon type=image/png sizes=32x32 href=/img/favicon_hu_441a82b0ee77b71a.png>
+<link rel=icon type=image/png sizes=48x48 href=/img/favicon_hu_bc65e60dd19ccab0.png>
+<link rel=apple-touch-icon sizes=180x180 href=/img/favicon_hu_82a7f8b4f0d2c027.png>
+</head><body class=navbar-fixed>
+<div class="container-fluid fixed-top p-0">
+<nav class="navbar px-4 py-4 navbar-fs-6 navbar-md-fs
+bg-body navbar-fixed-top navbar-expand-md">
+<div class="container-xxl p-0">
+<div class="d-flex navbar-container">
+<div class="d-flex align-items-center">
+<button class="navbar-toggler collapsed p-0 mx-auto invisible fw-30" type=button>
+<svg class="svg-inline--fa fas fa-ellipsis fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fas-ellipsis"/></svg></button></div>
+<div class="w-100 d-flex align-items-center w-md-auto">
+<a class="navbar-brand mx-auto" href=/ aria-label=Home>
+<img class="img-fluid m-auto" src=/img/logo_icon.svg height=30 width=30 alt=Hinode></a>
+</div>
+<div class="d-flex align-items-center">
+<button class="navbar-toggler main-nav-toggler collapsed p-0" type=button data-bs-toggle=collapse data-bs-target=#navbar-0-collapse aria-controls=navbar-0 aria-expanded=false aria-label="Toggle main navigation">
+<span class="toggler-icon top-bar emphasis"></span>
+<span class="toggler-icon middle-bar emphasis"></span>
+<span class="toggler-icon bottom-bar emphasis"></span>
+</button>
+</div>
+</div>
+<div class="navbar-collapse collapse" id=navbar-0-collapse>
+<div class="d-flex flex-fill ms-md-3 mt-4 mt-md-0 me-md-3">
+<form class="search flex-fill position-relative me-auto">
+<input class="search-input form-control is-search" type=search placeholder="Search this site" aria-label="Search this site" autocomplete=off name=search-input>
+<div class="search-suggestions shadow bg-body rounded d-none" data-no-results="No results for"></div>
+</form>
+</div>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class=nav-item>
+<a class=nav-link data-nav=main data-nav-main=home href=/><span class=d-md-none>Home</span>
+<span class="d-none d-md-block">Home</span>
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link data-nav=main data-nav-main=tags href=/tags><span class=d-md-none>Tags</span>
+<span class="d-none d-md-block">Tags</span>
+</a>
+</li>
+<li class="nav-link navbar-fs-6 navbar-md-fs d-flex mode-switch align-items-center" id=navbar-mode>
+<input type=checkbox class="checkbox navbar-mode-selector" id=navbar-mode-checkbox aria-label="Toggle theme">
+<label class=label for=navbar-mode-checkbox>
+<svg class="svg-inline--fa fas fa-sun fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-sun"/></svg>
+<svg class="svg-inline--fa fas fa-moon fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-moon"/></svg>
+<div class=ball></div>
+</label>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<main id=container class=main>
+<div class="container-xxl flex-fill py-4 px-4 px-xxl-0">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+<div class="col col-lg-2 d-none d-lg-block sidebar-overflow sticky-top p-0">
+</div>
+<div class="col-12 col-md-9 col-lg-8 mb-5">
+<header>
+<nav aria-label=breadcrumb class=d-sm-none>
+<ol class=breadcrumb>
+<li class=breadcrumb-item>
+<a href=/blog/>
+<svg class="svg-inline--fa fas fa-angle-left" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 256 512" overflow="visible"><use href="#fas-angle-left"/></svg>&nbsp;&nbsp;Blogs
+</a>
+</li></ol>
+</nav>
+<nav aria-label=breadcrumb class="d-none d-sm-block">
+<ol class=breadcrumb>
+<li class=breadcrumb-item><a href=/>Home</a></li>
+<li class=breadcrumb-item><a href=/blog/>Blogs</a></li><li class="breadcrumb-item active" aria-current=page>
+Form Builder Tool for Oracle APEX
+</li>
+</ol>
+</nav>
+<h1 id=form-builder-tool-for-oracle-apex class="display-4 pt-1">Form Builder Tool for Oracle APEX</h1>
+<small class="text-body-secondary text-uppercase">
+Last modified on October 2, 2026
+&bull;
+6&nbsp;min read
+&bull;
+1,262&nbsp;words
+</small>
+<div class="py-3 d-flex align-items-center">
+<span class="hstack gap-2 text-body-secondary">
+<a aria-label="Share via LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-linkedin fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-linkedin"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via Twitter" href="https://twitter.com/home?status=https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-x-twitter fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-x-twitter"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via Facebook" href="https://www.facebook.com/sharer.php?u=https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-facebook fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fab-facebook"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via WhatsApp" href="whatsapp://send?text=Form+Builder+Tool+for+Oracle+APEX%20https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-whatsapp fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-whatsapp"/></svg>
+</span>
+</span></a>
+<div id=toast-message-email-4 class=toast role=alert aria-live=assertive aria-atomic=true>
+<div class=toast-header>
+<strong class=me-auto>Hinode</strong>
+<button type=button class=btn-close data-bs-dismiss=toast aria-label=Close></button>
+</div>
+<div class=toast-body>Link copied to clipboard</div>
+</div>
+<a aria-label="Share via email" data-toast-target=toast-message-email-4 data-clipboard=https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/ class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fas fa-link fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via system" class="btn btn-primary position-relative btn-social p-0" data-sharing-description data-sharing-title="Form Builder Tool for Oracle APEX" data-sharing-url=https://gpmfactory.fr/blog/form-builder-tool-for-oracle-apex/ role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fas fa-share-nodes fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-share-nodes"/></svg>
+</span>
+</span></a>
+</span></div>
+</header>
+<div class="d-md-none pb-5">
+<div class="d-grid gap-2 mx-auto">
+<a href=#toc-collapse class="btn btn-outline-secondary position-relative toc-button" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse role=button>
+<span class="d-flex justify-content-between">
+<span class=my-auto>On this page</span>
+<span class="align-self-center ps-1">
+<svg class="svg-inline--fa fas fa-sort" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512" overflow="visible"><use href="#fas-sort"/></svg>
+</span>
+</span></a>
+</div>
+<div class="collapse border bg-body-tertiary rounded p-1 navbar-nav-scroll" id=toc-collapse>
+<small>
+<div class="toc toc-panel text-body p-2">
+<a class="toc-item toc-level-1" href=/blog/form-builder-tool-for-oracle-apex/#high-level-design>High level design</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#persona-and-role-definitions>Persona and Role definitions</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#apps-store>Apps Store</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#data-collecting>Data collecting</a>
+<a class="toc-item toc-level-1" href=/blog/form-builder-tool-for-oracle-apex/#form-design>Form design</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#sections>Sections</a>
+<a class="toc-item toc-level-1" href=/blog/form-builder-tool-for-oracle-apex/#user-interface>User Interface</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#list-of-values>List of Values</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#conditionnal-displaying>Conditionnal displaying</a>
+<a class="toc-item toc-level-1" href=/blog/form-builder-tool-for-oracle-apex/#technical-design>Technical design</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#data-model>Data Model</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#lifecycle>Lifecycle</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#security>Security</a>
+<a class="toc-item toc-level-1" href=/blog/form-builder-tool-for-oracle-apex/#appendices>Appendices</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#non-documented-apis-used-in-this-project>Non documented APIs used in this project</a>
+</div>
+</small>
+</div>
+</div>
+<p>Last revision: 27 sept 2022</p>
+<p>The purpose of this project is to give to <em>business users</em> a <em>no-code</em> tool for generating forms.</p>
+<p>This project called <em>GFM Builder</em> is at prototype stage. It relies mainly on API wich are not documented, even if there are widely used in APEX export App files (before 22.1 version). This approach is clearly no supported, so this tool must be considered as a playground and used in a sandbox only.</p>
+<p>The
+<a href=https://github.com/patrickmonaco/GFM-Builder>application GFM Builder is available from Github</a>
+.</p>
+<p>Target audience</p>
+<p>GFM Builder addresses mainly companies intranet requirements but citizen portals needs as well.</p>
+<p>A common use case is to trigger an administrative process based on informations provided by an employee or a citizen. ie: renewal contrat, ordering internal good, signaling problem in a district, etc.</p>
+<p>This tool will leverage, in a next version, the new approval task process which can be embeded in a page.</p>
+<p>Once these limitations given, let&rsquo;s see the functionnal aspects.</p>
+<h2 id=high-level-design class=heading>High level design<a href=#high-level-design aria-labelledby=high-level-design>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<h3 id=persona-and-role-definitions class=heading>Persona and Role definitions<a href=#persona-and-role-definitions aria-labelledby=persona-and-role-definitions>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>GFM Builder is dedicated to <em>business users</em>.<br>
+That means that <strong>we haven&rsquo;t to declare users as APEX developers.</strong> Users will be able to author and publish forms without any knowledge of Oracle APEX.</p>
+<p>We consider the following roles:</p>
+<ul>
+<li>Regular APEX Roles
+<ul>
+<li>APEX Workspace Administrator</li>
+<li>APEX Developer</li>
+<li>APEX End User</li>
+</ul>
+</li>
+<li>Application Roles brougth with the tool
+<ul>
+<li>GFM Builder Administrator</li>
+<li>GFM Builder Developer</li>
+<li>Final user ( means an APEX End User or an anonymous user)</li>
+</ul>
+</li>
+</ul>
+<p>The GFM Builder Role is implemented as a <em>Contributor</em> Role in the APEX simplifed ACL model.</p>
+<p>The GFM Builder Administrator role is maped on <em>Admin</em> Role</p>
+<p>In order to build a form, the <strong>GFM Builder Developer</strong> role must be granted to an APEX End user.</p>
+<h4 id=generated-form-samples class=heading>Generated Form Samples<a href=#generated-form-samples aria-labelledby=generated-form-samples>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<p>Below are sample of forms generated with GFM Builder.</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-1-1024x559-2800x1529.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-1-1024x559-576x314.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-1-1024x559-768x419.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-1-1024x559-992x542.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-1-1024x559-1200x655.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-1-1024x559-1400x764.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-1-1024x559-2800x1529.webp 2800w" sizes=100vw height=1529 width=2800 alt=image>
+<p>In this case, we choosed to display fields grouped by sections (GENERAL, RH, ..)</p>
+<p>A form can embed a detail array for multivalued informations. In this case, it&rsquo;s a historic of entries.</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-2-1024x549-2800x1501.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-2-1024x549-576x309.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-2-1024x549-768x412.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-2-1024x549-992x532.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-2-1024x549-1200x643.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-2-1024x549-1400x751.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-2-1024x549-2800x1501.webp 2800w" sizes=100vw height=1501 width=2800 alt=image>
+<p>Using a detail array inside a form</p>
+<h3 id=apps-store class=heading>Apps Store<a href=#apps-store aria-labelledby=apps-store>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>A sample catalog application (GFM Store) is provided as an exemple. Each time a form is tagged as <em>Published</em>, it will be displayed in this catalog.</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-5-1024x562-2800x1537.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-5-1024x562-576x316.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-5-1024x562-768x422.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-5-1024x562-992x544.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-5-1024x562-1200x659.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-5-1024x562-1400x768.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-5-1024x562-2800x1537.webp 2800w" sizes=100vw height=1537 width=2800 alt=image>
+<h3 id=data-collecting class=heading>Data collecting<a href=#data-collecting aria-labelledby=data-collecting>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>All data are stored in a unique table GFM_DATA.</p>
+<p>The data can be displayed by GFM Builder Admin and Forms owners.</p>
+<p>Final users will not be able to display data. We suppose that a process will send data to the user, by any feedback way, email for instance. It&rsquo;s not in the scope of the project.</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-14-2800x1410.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-14-576x290.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-14-768x387.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-14-992x500.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-14-1200x604.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-14-1400x705.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-14-2800x1410.webp 2800w" sizes=100vw height=1410 width=2800 alt=image>
+<p>Simplified report displaying data collected through a form</p>
+<h2 id=form-design class=heading>Form design<a href=#form-design aria-labelledby=form-design>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>The design process is mainly declarative. It&rsquo;s a matter of designing the items which constiture the form.</p>
+<p>Instead of creating a data set then building the form (in in standard way), we create there both the data set and the form in the same user interface.</p>
+<p>A form is comprised of items. An items is either a simple attribute (like text Field, date) or a multivalued attribute. This second kind of items is implemented as an Interactive Grid. This technical choice provides more flexibility during fields filling.</p>
+<p>Items must be pick up from a predifined collection of components which are:</p>
+<ul>
+<li>
+<p><strong>Basic items</strong><br>
+Text,Number, Date, email, Inline List (List of values declared inline)</p>
+</li>
+<li>
+<p><strong>Predifined List of values</strong><br>
+These lists are created in a dedicated page called &lsquo;Components&rsquo;, either by an administrator or the user himself.</p>
+</li>
+<li>
+<p><strong>Grids</strong><br>
+It&rsquo;a an existing form wich is declared as been usable as a grid inside an other form. ie: Historic of positions, list of contracts, etc.</p>
+</li>
+</ul>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-17-1024x528-2800x1444.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-17-1024x528-576x297.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-17-1024x528-768x396.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-17-1024x528-992x512.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-17-1024x528-1200x619.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-17-1024x528-1400x722.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-17-1024x528-2800x1444.webp 2800w" sizes=100vw height=1444 width=2800 alt=image>
+<h4 id=reusing-existing-form-definitions class=heading>Reusing existing form definitions<a href=#reusing-existing-form-definitions aria-labelledby=reusing-existing-form-definitions>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<p>It&rsquo;s possible to copy all items of an existing form into an other form.</p>
+<ul>
+<li>Inline declaration<br>
+value and label are given the same value.</li>
+<li>Specification declaration in component module</li>
+<li>External declaration<br>
+per declaring the name of the external table or view.</li>
+</ul>
+<h3 id=sections class=heading>Sections<a href=#sections aria-labelledby=sections>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>A section is a logical group of items which will be rendered as either a tab or a paragraph, depending a preference.</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-6-1024x577-2800x1578.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-6-1024x577-576x325.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-6-1024x577-768x433.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-6-1024x577-992x559.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-6-1024x577-1200x676.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-6-1024x577-1400x789.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-6-1024x577-2800x1578.webp 2800w" sizes=100vw height=1578 width=2800 alt=image>
+<p>Fields are spreaded in sub-regions if there are two sections at least referenced by items. Navigation is provided by tabs, either with regular tabs or tabs and a first overall tab.</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-16-2800x760.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-16-576x156.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-16-768x208.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-16-992x269.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-16-1200x326.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-16-1400x380.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-16-2800x760.webp 2800w" sizes=100vw height=760 width=2800 alt=image>
+<p>Example of navigation with preference $REGION_SECTION =DISPLAY_SELECTOR</p>
+<h2 id=user-interface class=heading>User Interface<a href=#user-interface aria-labelledby=user-interface>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>The user interface is very classic with very minimum usage of Drag n Drop. This is a weakness if we compare with other no-code tools on the market. But on an other hand, the tool priviliges flexibility in rendering, that is not the case with &ldquo;Google Forms&rdquo;, for instance.<br>
+At the minimum, it&rsquo;s possible by Drag&rsquo;n Drop to re-order displayed items.</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-3-1024x568-2800x1553.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-3-1024x568-576x320.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-3-1024x568-768x426.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-3-1024x568-992x550.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-3-1024x568-1200x666.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-3-1024x568-1400x777.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-3-1024x568-2800x1553.webp 2800w" sizes=100vw height=1553 width=2800 alt=image>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-4-1024x566-2800x1548.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-4-1024x566-576x318.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-4-1024x566-768x425.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-4-1024x566-992x548.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-4-1024x566-1200x663.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-4-1024x566-1400x774.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-4-1024x566-2800x1548.webp 2800w" sizes=100vw height=1548 width=2800 alt=image>
+<p>Rendering</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-7-1024x565-2800x1545.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-7-1024x565-576x318.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-7-1024x565-768x424.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-7-1024x565-992x547.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-7-1024x565-1200x662.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-7-1024x565-1400x772.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-7-1024x565-2800x1545.webp 2800w" sizes=100vw height=1545 width=2800 alt=image>
+<p>Very Minimal Decoration</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-8-1024x547-2800x1496.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-8-1024x547-576x308.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-8-1024x547-768x410.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-8-1024x547-992x530.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-8-1024x547-1200x641.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-8-1024x547-1400x748.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-8-1024x547-2800x1496.webp 2800w" sizes=100vw height=1496 width=2800 alt="This image has an empty alt attribute; its file name is image-8-1024x547.png">
+<p>Minimal decoration</p>
+<h4 id=generation-options class=heading>Generation options<a href=#generation-options aria-labelledby=generation-options>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<p>a set of preferences drives the generation process. We have reused APEX terminology in order to be in line with the regular Developer Interface.</p>
+<p>For the moment, there are a few preferences:</p>
+<ul>
+<li>$ITEM_TEMPLATE (FLOATING, ABOVE, BESIDE)</li>
+<li>$ITEM_HELP (Y,N)</li>
+<li>$PAGE_TEMPLATE (MINIMAL_NO_NAVIGATION)</li>
+<li>$REGION_SECTION (STANDARD, TABS_CONTAINER,DISPLAY_SELECTOR</li>
+</ul>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-9-1024x571-2800x1561.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-9-1024x571-576x321.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-9-1024x571-768x428.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-9-1024x571-992x553.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-9-1024x571-1200x669.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-9-1024x571-1400x781.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-9-1024x571-2800x1561.webp 2800w" sizes=100vw height=1561 width=2800 alt=image>
+<p>Below are some variants depending on &ldquo;Navigation between sections&rdquo; preference</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-10-1024x582-2800x1591.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-10-1024x582-576x327.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-10-1024x582-768x437.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-10-1024x582-992x564.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-10-1024x582-1200x682.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-10-1024x582-1400x796.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-10-1024x582-2800x1591.webp 2800w" sizes=100vw height=1591 width=2800 alt=image>
+<p>Section in a standard rendering</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-11-1024x563-2800x1539.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-11-1024x563-576x317.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-11-1024x563-768x422.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-11-1024x563-992x545.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-11-1024x563-1200x660.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-11-1024x563-1400x770.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-11-1024x563-2800x1539.webp 2800w" sizes=100vw height=1539 width=2800 alt=image>
+<p>Sections rendered with Tabs</p>
+<h3 id=list-of-values class=heading>List of Values<a href=#list-of-values aria-labelledby=list-of-values>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>The creation of list of values is done by creating a new component with a LIST type. Then, a second page is used for entering the values.</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-13-1024x499-2800x1364.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-13-1024x499-576x281.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-13-1024x499-768x374.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-13-1024x499-992x483.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-13-1024x499-1200x585.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-13-1024x499-1400x682.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-13-1024x499-2800x1364.webp 2800w" sizes=100vw height=1364 width=2800 alt=image>
+<p>List of components (The predefined lists are tagged List)</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-15-1024x435-2800x1189.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-15-1024x435-576x245.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-15-1024x435-768x326.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-15-1024x435-992x421.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-15-1024x435-1200x510.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-15-1024x435-1400x595.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-15-1024x435-2800x1189.webp 2800w" sizes=100vw height=1189 width=2800 alt=image>
+<p>Entering the values for a List of Values component.</p>
+<h3 id=conditionnal-displaying class=heading>Conditionnal displaying<a href=#conditionnal-displaying aria-labelledby=conditionnal-displaying>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>An item can be displayed or not depending the value of an other item. If the driving item is based upon a List, the list of values will be proposed for choosing a specific value which will trigger displaying of slave item.</p>
+<h2 id=technical-design class=heading>Technical design<a href=#technical-design aria-labelledby=technical-design>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<h3 id=data-model class=heading>Data Model<a href=#data-model aria-labelledby=data-model>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/Form-Builder-2800x1783.png srcset="/blog/form-builder-tool-for-oracle-apex/images/Form-Builder-576x367.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/Form-Builder-768x489.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/Form-Builder-992x632.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/Form-Builder-1200x764.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/Form-Builder-1400x891.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/Form-Builder-2800x1783.webp 2800w" sizes=100vw height=1783 width=2800 alt=image>
+<p>Implementation</p>
+<ul>
+<li>A data model for the form/Sections/Items, preferences and components</li>
+<li>A main data store (GFM_DATA), designed in the same way that the apex_collection table. There are 50 items at maximum.</li>
+<li>As many views there are forms. Each view is given an <em>instead</em> trigger.</li>
+<li>For each form, a specific view maps columns on given columns of the gfm_data table.</li>
+</ul>
+<h4 id=generating-process class=heading>Generating process<a href=#generating-process aria-labelledby=generating-process>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<ul>
+<li>Re-generate specific view</li>
+<li>Re-generate specific Trigger</li>
+<li>Generate the corresponding Page in a target Application.</li>
+</ul>
+<p>The target application must belong to an arbitrary Application Group called &lsquo;GFM Apps&rsquo; and must be choosed in the setup page. The &lsquo;GFM Apps&rsquo; is automatically created during installation of GFM Store application.</p>
+<p>List of Values</p>
+<p>All the data are stored in a dedicated table: GFM_LOV.</p>
+<p>Objects are named in Oracle database with <strong>GFM_</strong> prefix</p>
+<h3 id=lifecycle class=heading>Lifecycle<a href=#lifecycle aria-labelledby=lifecycle>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>If an item is renamed, there are no impact in the mapping</p>
+<p>If an item is dropped, the mapped column in the GFM_DATA table is preserved, and no other item won&rsquo;t be mapped on it. The reason it that we want avoid to display old data with the new item.<br>
+An option menu allow to reset data and column mapping.</p>
+<h3 id=security class=heading>Security<a href=#security aria-labelledby=security>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>Before form are deployed, they must by set &ldquo;Published&rdquo; state.</p>
+<p>A form can be accessible either in a anonymous mode (no need to be authenticated) or in an authenticated mode.</p>
+<p>because GFM Builder relies intensively on internal APEX API, some important flags have been set:</p>
+<img class=img-fluid src=/blog/form-builder-tool-for-oracle-apex/images/image-12-2800x901.png srcset="/blog/form-builder-tool-for-oracle-apex/images/image-12-576x185.webp 576w, /blog/form-builder-tool-for-oracle-apex/images/image-12-768x247.webp 768w, /blog/form-builder-tool-for-oracle-apex/images/image-12-992x319.webp 992w, /blog/form-builder-tool-for-oracle-apex/images/image-12-1200x386.webp 1200w, /blog/form-builder-tool-for-oracle-apex/images/image-12-1400x451.webp 1400w, /blog/form-builder-tool-for-oracle-apex/images/image-12-2800x901.webp 2800w" sizes=100vw height=901 width=2800 alt=image>
+<p>A compagnon Application called &lsquo;GFM Store&rsquo; is provided as an example of an Apps store.</p>
+<h2 id=appendices class=heading>Appendices<a href=#appendices aria-labelledby=appendices>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<h3 id=non-documented-apis-used-in-this-project class=heading>Non documented APIs used in this project<a href=#non-documented-apis-used-in-this-project aria-labelledby=non-documented-apis-used-in-this-project>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<ul>
+<li>wwv_flow_api.create_page</li>
+<li>wwv_flow_api.create_page_plug</li>
+<li>wwv_flow_api.create_page_button</li>
+<li>wwv_flow_api.create_page_branch</li>
+<li>wwv_flow_api.create_page_item</li>
+<li>wwv_flow_api.create_page_process</li>
+<li>wwv_flow_api.create_page_da_event</li>
+<li>wwv_flow_api.create_page_da_action</li>
+<li>wwv_flow_api.create_region_column</li>
+<li>wwv_flow_api.create_interactive_grid</li>
+<li>wwv_flow_api.create_ig_report_column</li>
+</ul>
+<p>APEX export API have been rewritten in 22.1 (wwv_flow_imp). That means that the previous API are not garanteed to be working in the future, and therefore neither is this tool GFM Builder.</p>
+<p>Plugins used in the project</p>
+<ul>
+<li>
+<a href=https://blog.foex.at/drag-drop-in-apex-made-easy/>FOEX Drag n Drop</a>
+</li>
+<li>
+<a href="https://fos.world/ords/f?p=10000:1080:::NO:::">FOEX Redirect and Message Actions</a>
+</li>
+</ul>
+<div class="row row-cols-2 mt-5 mb-3">
+<div class=col><a class=page-nav-prev href=/blog/fop-lab-experimental-apex-project/>
+<span class=visually-hidden>Previous page:&nbsp;</span>
+<svg class="svg-inline--fa fas fa-arrow-left" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-arrow-left"/></svg>&nbsp;FOP Lab - Experimental APEX Project
+</a></div>
+<div class="col text-end"><a class=page-nav-next href=/blog/free-tv-sur-raspberry-pi-5-avec-cast-sur-google-nest/>
+<span class=visually-hidden>Next page:&nbsp;</span>Free TV sur Raspberry Pi 5 avec Cast sur Google Nest&nbsp;
+<svg class="svg-inline--fa fas fa-arrow-right" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-arrow-right"/></svg>
+</a></div>
+</div>
+</div>
+<div class="col col-md-3 col-lg-2 d-none d-md-block">
+<div class="toc toc-sidebar mb-5 my-md-0 mb-lg-5 pb-3 text-body-secondary sticky-top">
+<h2 class="h6 fw-bold lh-base mt-0 mb-2" id=toc-heading>On this page</h2>
+<nav class=toc aria-labelledby=toc-heading>
+<a class="toc-item toc-level-1" href=/blog/form-builder-tool-for-oracle-apex/#high-level-design>High level design</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#persona-and-role-definitions>Persona and Role definitions</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#apps-store>Apps Store</a>
+<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#data-collecting>Data collecting</a>
+<a class="toc-item toc-level-1" href=/blog/form-builder-tool-for-oracle-apex/#form-design>Form design</a>
+[<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#sections>Sections</a>]
+<a class="toc-item toc-level-1" href=/blog/form-builder-tool-for-oracle-apex/#user-interface>User Interface</a>
+[<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#list-of-values>List of Values</a>]
+[<a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#conditionnal-displaying>Conditionnal displaying</a>]
+<a href=#toc-collapse-items id=btnTOCShowMore class="btn btn-link link-primary position-relative toc-item" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse-items role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Show 2 more</span>
+</span></a>
+<div class=collapse id=toc-collapse-items>
+[<a class="toc-item toc-level-1" href=/blog/form-builder-tool-for-oracle-apex/#technical-design>Technical design</a> <a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#data-model>Data Model</a> <a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#lifecycle>Lifecycle</a> <a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#security>Security</a>]
+[<a class="toc-item toc-level-1" href=/blog/form-builder-tool-for-oracle-apex/#appendices>Appendices</a> <a class="toc-item toc-level-2" href=/blog/form-builder-tool-for-oracle-apex/#non-documented-apis-used-in-this-project>Non documented APIs used in this project</a>]
+&nbsp;
+<a href=#toc-collapse-items id=btnTOCShowLess class="btn btn-link link-primary position-relative toc-item" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse-items role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Show less</span>
+</span></a>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</main><div class="container-fluid bg-primary bg-opacity-10">
+<div class="container-xxl px-4 px-xxl-0">
+<div class="row row-cols-2 py-3 align-items-center">
+<div class="col col-6">
+<div class="row justify-content-end p-0">
+<div class="col-12 col-md-8 p-0">
+<div class="fs-3 fw-bold">Follow me</div>
+<p>I work on everything coding and tweet developer memes</p>
+</div>
+</div>
+</div>
+<div class="col col-6 text-sm-start">
+<a href=https://linkedin.com/ aria-label=LinkedIn class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-linkedin fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-linkedin"/></svg>&nbsp;
+</a>
+<a href=https://github.com/ aria-label=GitHub class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-github fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fab-github"/></svg>&nbsp;
+</a>
+<a href=https://medium.com/ aria-label=Medium class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-medium fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-medium"/></svg>&nbsp;
+</a>
+</div>
+</div>
+</div>
+</div>
+<footer class="container-fluid footer text-center p-3">
+<div class="container-xxl text-center">
+<small>
+Copyright © 2022 - 2026 Hinode Team.
+|
+Powered by
+<a href=https://gethinode.com class=link-bg-footer>Hinode</a>
+</small>
+</div>
+</footer><div id=toast-container class="toast-container position-fixed bottom-0 end-0 p-3">
+<div id=toast-copied-code-message class=toast role=alert aria-live=assertive aria-atomic=true>
+<div class=toast-header>
+<strong class=me-auto>Hinode</strong>
+<button type=button class=btn-close data-bs-dismiss=toast aria-label=Close></button>
+</div>
+<div class=toast-body>Code copied to clipboard</div>
+</div>
+</div>
+<dialog class=lightbox aria-label="Enlarged view">
+<button type=button class=lightbox-close aria-label=Close>
+<svg class="svg-inline--fa fas fa-xmark fa-fw fa-xl" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512" overflow="visible"><use href="#fas-xmark"/></svg></button>
+<div class=lightbox-content></div>
+</dialog>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" display="none"><symbol id="fab-facebook" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M512 256C512 114.6 397.4.0 256 0S0 114.6.0 256C0 376 82.7 476.8 194.2 504.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2.0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></symbol><symbol id="fab-github" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5.0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5.0S0 115.5.0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5.0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21z"/></symbol><symbol id="fab-linkedin" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3V447.7C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3C448 46.5 433.6 32 416 32zM135.4 416H69V202.2h66.5V416h-.1zM102.2 96a38.5 38.5.0 110 77 38.5 38.5.0 110-77zM384.3 416h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></symbol><symbol id="fab-medium" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M369.4 32c43.4.0 78.6 35.2 78.6 78.6v83.8c-1.9-.1-3.8-.2-5.7-.2h-.4c-10 0-22.3 2.4-31.1 6.8-10 4.6-18.7 11.5-26 20.6-11.8 14.6-18.9 34.3-20.6 56.4-.1.7-.1 1.3-.2 2s-.1 1.2-.1 1.9c-.1 1.2-.1 2.4-.1 3.6.0 1.9-.1 3.8.0 5.8 1.2 50.1 28.2 90.2 76.3 90.2 2.7.0 5.3-.1 7.9-.4v20.4c0 43.4-35.2 78.6-78.6 78.6L78.6 480C35.2 480 0 444.8.0 401.4V110.6C0 67.2 35.2 32 78.6 32h290.8zM82.3 138.9l.3.1c13.2 3 19.8 7.4 19.8 23.4v187.2c0 16-6.7 20.4-19.9 23.4l-.3.1v2.8H135v-2.8l-.3-.1c-13.2-3-19.9-7.4-19.9-23.4V173.3l86.1 202.5h4.9l88.6-208.2v186.6c-1.1 12.6-7.8 16.5-19.7 19.2l-.3.1v2.7h91.9v-2.7l-.3-.1c-11.9-2.7-18.7-6.6-19.9-19.2l-.1-191.8h.1c0-16 6.7-20.4 19.9-23.4l.3-.1v-2.7h-72.2l-67 157.4-67-157.4H82.3v2.7zM448 340.3c-25.1-7.4-43-35.1-41.2-67.8h41.1v67.8zm-6.4-135.6c2.3.0 4.4.3 6.4.9V263h-40.2c1.5-33.6 13.6-57.9 33.8-58.3z"/></symbol><symbol id="fab-whatsapp" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4.0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3.0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2.0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2.0-101.7 82.8-184.5 184.6-184.5 49.3.0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></symbol><symbol id="fab-x-twitter" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8L168.7 275.5-5.2 48H140.4L240.9 180.9 357.2 48zM332.4 421.8h39.1L119.1 88h-42l255.3 333.8z"/></symbol><symbol id="fas-angle-left" overflow="visible" viewBox="0 0 256 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8.0 45.3l160 160c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0l-160 160z"/></symbol><symbol id="fas-arrow-left" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8.0 45.3l160 160c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L109.3 288H480c17.7.0 32-14.3 32-32s-14.3-32-32-32H109.3l105.4-105.4c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0l-160 160z"/></symbol><symbol id="fas-arrow-right" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8.0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3.0s-12.5 32.8.0 45.3L402.7 224H32c-17.7.0-32 14.3-32 32s14.3 32 32 32h370.7L297.3 393.4c-12.5 12.5-12.5 32.8.0 45.3s32.8 12.5 45.3.0l160-160z"/></symbol><symbol id="fas-ellipsis" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M0 256a56 56 0 11112 0A56 56 0 110 256zm168 0a56 56 0 11112 0 56 56 0 11-112 0zm224-56a56 56 0 110 112 56 56 0 110-112z"/></symbol><symbol id="fas-link" overflow="visible" viewBox="0 0 576 512"><path fill="currentColor" d="M419.5 96c-16.6.0-32.7 4.5-46.8 12.7-15.8-16-34.2-29.4-54.5-39.5 28.2-24 64.1-37.2 101.3-37.2C505.9 32 576 102 576 188.5c0 41.5-16.5 81.3-45.8 110.6l-71.1 71.1C429.8 399.5 390 416 348.5 416 262.1 416 192 346 192 259.5c0-1.5.0-3 .1-4.5.5-17.7 15.2-31.6 32.9-31.1s31.6 15.2 31.1 32.9c0 .9.0 1.8.0 2.6.0 51.1 41.4 92.5 92.5 92.5 24.5.0 48-9.7 65.4-27.1l71.1-71.1c17.3-17.3 27.1-40.9 27.1-65.4.0-51.1-41.4-92.5-92.5-92.5zM275.2 173.3c-1.9-.8-3.8-1.9-5.5-3.1-12.6-6.5-27-10.2-42.1-10.2-24.5.0-48 9.7-65.4 27.1L91.1 258.2C73.8 275.5 64 299.1 64 323.6c0 51.1 41.4 92.5 92.5 92.5 16.5.0 32.6-4.4 46.7-12.6 15.8 16 34.2 29.4 54.6 39.5-28.2 23.9-64 37.2-101.3 37.2C70.1 480.2.0 410.2.0 323.7c0-41.5 16.5-81.3 45.8-110.6l71.1-71.1c29.3-29.3 69.1-45.8 110.6-45.8 86.6.0 156.5 70.6 156.5 156.9.0 1.3.0 2.6.0 3.9-.4 17.7-15.1 31.6-32.8 31.2s-31.6-15.1-31.2-32.8c0-.8.0-1.5.0-2.3.0-33.7-18-63.3-44.8-79.6z"/></symbol><symbol id="fas-moon" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6.0.0 114.6.0 256S114.6 512 256 512c68.8.0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9.4-9.8.6-14.8.6-101.6.0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4S322.6 8.5 312.7 6.3C294.4 2.2 275.4.0 256 0z"/></symbol><symbol id="fas-share-nodes" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M384 192c53 0 96-43 96-96S437 0 384 0s-96 43-96 96c0 5.4.5 10.8 1.3 16L159.6 184.1c-16.9-15-39.2-24.1-63.6-24.1-53 0-96 43-96 96s43 96 96 96c24.4.0 46.6-9.1 63.6-24.1L289.3 4e2c-.9 5.2-1.3 10.5-1.3 16 0 53 43 96 96 96s96-43 96-96-43-96-96-96c-24.4.0-46.6 9.1-63.6 24.1L190.7 272c.9-5.2 1.3-10.5 1.3-16s-.5-10.8-1.3-16l129.7-72.1c16.9 15 39.2 24.1 63.6 24.1z"/></symbol><symbol id="fas-sort" overflow="visible" viewBox="0 0 384 512"><path fill="currentColor" d="M2.4 204.2C7.4 216.2 19 224 32 224h320c12.9.0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-160-160c-12.5-12.5-32.8-12.5-45.3.0l-160 160c-9.2 9.2-11.9 22.9-6.9 34.9zm0 103.5c-5 12-2.2 25.7 6.9 34.9l160 160c12.5 12.5 32.8 12.5 45.3.0l160-160c9.2-9.2 11.9-22.9 6.9-34.9S364.9 288 352 288H32c-12.9.0-24.6 7.8-29.6 19.8z"/></symbol><symbol id="fas-sun" overflow="visible" viewBox="0 0 576 512"><path fill="currentColor" d="M288-32c8.4.0 16.3 4.4 20.6 11.7l55.5 92.6L468.9 46c8.2-2 16.9.4 22.8 6.3S5e2 67 498 75.1l-26.3 104.7 92.7 55.5c7.2 4.3 11.7 12.2 11.7 20.6s-4.4 16.3-11.7 20.6l-92.7 55.6L498 436.8c2 8.2-.4 16.9-6.3 22.8S477 468 468.9 466l-104.7-26.3-55.5 92.7c-4.3 7.2-12.2 11.7-20.6 11.7s-16.3-4.4-20.6-11.7L211.9 439.7 107.2 466c-8.2 2-16.8-.4-22.8-6.3S76 445 78 436.8l26.2-104.7-92.6-55.5C4.4 272.2.0 264.4.0 256s4.4-16.3 11.7-20.6l92.6-55.5L78 75.1c-2-8.2.3-16.8 6.3-22.8S99 44 107.2 46l104.7 26.2 55.5-92.6 1.8-2.6c4.5-5.7 11.4-9.1 18.8-9.1zm0 144a144 144 0 100 288 144 144 0 100-288zm0 240a96 96 0 110-192 96 96 0 110 192z"/></symbol><symbol id="fas-xmark" overflow="visible" viewBox="0 0 384 512"><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3.0s-12.5 32.8.0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8.0 45.3s32.8 12.5 45.3.0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0L192.5 210.7 55.1 73.4z"/></symbol></svg>
+<script src=/js/core.bundle.en.378f11853928e62e422b122cf3fb703f2ebb80d353451c2c8ec304d70a125bfc.js integrity="sha256-N48RhTko5i5CKxIs8/twPy67gNNTRRwsjsME1woSW/w=" crossorigin=anonymous defer></script>
+<script src=/js/core.bundle.en.a00f94c296574cfee65e112d82eb3b22b3a4afb097b9f59787a25d401459cdd9.mjs type=module integrity="sha256-oA+UwpZXTP7mXhEtgus7IrOkr7CXufWXh6JdQBRZzdk=" crossorigin=anonymous defer></script></body>
+</html>

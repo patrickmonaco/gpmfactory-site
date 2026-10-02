@@ -1,0 +1,573 @@
+<!doctype html><html lang=en class=no-js>
+<head>
+<script src=/js/critical.bundle.399c4138abc75303a6bff242ed2180522e22bb15d98644943a0d4379551de6b6.js integrity="sha256-OZxBOKvHUwOmv/JC7SGAUi4iuxXZhkSUOg1DeVUd5rY=" crossorigin=anonymous></script><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=generator content="Hugo 0.166.0">
+<meta name=theme content="Hinode 3.20.0">
+<link rel=stylesheet href="/css/main.min.c994f7d86a7d59348dcc977addcde72a6a4c0e1209917060ac62b2c8789bc1da.css" integrity="sha256-yZT32Gp9WTSNzJd63c3nKmpMDhIJkXBgrGKyyHibwdo=" crossorigin=anonymous>
+<link rel=preload href=/fonts/inter-v12-latin-regular.woff2 as=font type=font/woff2 crossorigin>
+<meta name=robots content="index, follow">
+<meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<title>Using BI Publisher RTF templates with Oracle APEX - Hinode </title>
+<meta name=description content=" Leverage the Oracle BI Publisher templating power and produce high fidelity reports
+Abstract Oracle APEX is a tool which is well suited for rapid app...">
+<link rel=canonical href=https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/>
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Using BI Publisher RTF templates with Oracle APEX">
+<meta property="og:description" content=" Leverage the Oracle BI Publisher templating power and produce high fidelity reports
+Abstract Oracle APEX is a tool which is well suited for rapid app...">
+<meta property="og:url" content="https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/">
+<meta property="og:site_name" content="Hinode">
+<meta property="article:published_time" content="2019-10-16T00:00:00+00:00">
+<meta property="article:modified_time" content="2026-10-02T18:38:29+02:00">
+<meta property="og:image" content="https://gpmfactory.fr/img/logo1280x640.png">
+<meta property="og:image:alt" content="Using BI Publisher RTF templates with Oracle APEX">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="Using BI Publisher RTF templates with Oracle APEX">
+<meta name=twitter:description content=" Leverage the Oracle BI Publisher templating power and produce high fidelity reports
+Abstract Oracle APEX is a tool which is well suited for rapid app...">
+<meta name=twitter:image content="https://gpmfactory.fr/img/logo1280x640.png">
+<meta name=twitter:image:alt content="Using BI Publisher RTF templates with Oracle APEX">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://gpmfactory.fr/#/schema/organization/1","name":"Hinode","url":"https://gpmfactory.fr/","sameAs":[null,"https://github.com/gethinode/hinode"],"logo":{"@type":"ImageObject","@id":"https://gpmfactory.fr/#/schema/image/1","url":"https://gpmfactory.fr/img/logo512x512.png","width":512,"height":512,"caption":"Hinode"},"image":{"@id":"https://gpmfactory.fr/#/schema/image/1"}},{"@type":"WebSite","@id":"https://gpmfactory.fr/#/schema/website/1","url":"https://gpmfactory.fr/","name":"Hinode","description":"Hinode is a clean documentation and blog theme for your Hugo site based on Bootstrap 5.","publisher":{"@id":"https://gpmfactory.fr/#/schema/organization/1"}},{"@type":"WebPage","@id":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/","url":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/","name":"Using BI Publisher RTF templates with Oracle APEX","description":"","isPartOf":{"@id":"https://gpmfactory.fr/#/schema/website/1"},"about":{"@id":"https://gpmfactory.fr/#/schema/organization/1"},"datePublished":"2019-10-16T00:00:00CET","dateModified":"2026-10-02T18:38:29CET","breadcrumb":{"@id":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#/schema/image/2"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/"]}]},{"@type":"BreadcrumbList","@id":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://gpmfactory.fr/","url":"https://gpmfactory.fr/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://gpmfactory.fr/blog/","url":"https://gpmfactory.fr/blog/","name":"Blogs"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/","url":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/","name":"Using BI Publisher RTF templates with Oracle APEX"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://gpmfactory.fr/#/schema/article/1","headline":"Using BI Publisher RTF templates with Oracle APEX","description":"","isPartOf":{"@id":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/"},"mainEntityOfPage":{"@id":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/"},"datePublished":"2019-10-16T00:00:00CET","dateModified":"2026-10-02T18:38:29CET","author":{"@id":"https://gpmfactory.fr/#/schema/person/2"},"publisher":{"@id":"https://gpmfactory.fr/#/schema/organization/1"},"image":{"@id":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://gpmfactory.fr/#/schema/person/2","name":"Mark Dumay","sameAs":["https://www.linkedin.com/in/markdumay/","https://github.com/markdumay"]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#/schema/image/2","url":"https://gpmfactory.fr/img/logo1280x640.png","contentUrl":"https://gpmfactory.fr/img/logo1280x640.png","caption":"Using BI Publisher RTF templates with Oracle APEX"}]}]}</script>
+<link rel=icon type=image/png sizes=16x16 href=/img/favicon_hu_20390864c1ea8166.png>
+<link rel=icon type=image/png sizes=32x32 href=/img/favicon_hu_441a82b0ee77b71a.png>
+<link rel=icon type=image/png sizes=48x48 href=/img/favicon_hu_bc65e60dd19ccab0.png>
+<link rel=apple-touch-icon sizes=180x180 href=/img/favicon_hu_82a7f8b4f0d2c027.png>
+</head><body class=navbar-fixed>
+<div class="container-fluid fixed-top p-0">
+<nav class="navbar px-4 py-4 navbar-fs-6 navbar-md-fs
+bg-body navbar-fixed-top navbar-expand-md">
+<div class="container-xxl p-0">
+<div class="d-flex navbar-container">
+<div class="d-flex align-items-center">
+<button class="navbar-toggler collapsed p-0 mx-auto invisible fw-30" type=button>
+<svg class="svg-inline--fa fas fa-ellipsis fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fas-ellipsis"/></svg></button></div>
+<div class="w-100 d-flex align-items-center w-md-auto">
+<a class="navbar-brand mx-auto" href=/ aria-label=Home>
+<img class="img-fluid m-auto" src=/img/logo_icon.svg height=30 width=30 alt=Hinode></a>
+</div>
+<div class="d-flex align-items-center">
+<button class="navbar-toggler main-nav-toggler collapsed p-0" type=button data-bs-toggle=collapse data-bs-target=#navbar-0-collapse aria-controls=navbar-0 aria-expanded=false aria-label="Toggle main navigation">
+<span class="toggler-icon top-bar emphasis"></span>
+<span class="toggler-icon middle-bar emphasis"></span>
+<span class="toggler-icon bottom-bar emphasis"></span>
+</button>
+</div>
+</div>
+<div class="navbar-collapse collapse" id=navbar-0-collapse>
+<div class="d-flex flex-fill ms-md-3 mt-4 mt-md-0 me-md-3">
+<form class="search flex-fill position-relative me-auto">
+<input class="search-input form-control is-search" type=search placeholder="Search this site" aria-label="Search this site" autocomplete=off name=search-input>
+<div class="search-suggestions shadow bg-body rounded d-none" data-no-results="No results for"></div>
+</form>
+</div>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class=nav-item>
+<a class=nav-link data-nav=main data-nav-main=home href=/><span class=d-md-none>Home</span>
+<span class="d-none d-md-block">Home</span>
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link data-nav=main data-nav-main=tags href=/tags><span class=d-md-none>Tags</span>
+<span class="d-none d-md-block">Tags</span>
+</a>
+</li>
+<li class="nav-link navbar-fs-6 navbar-md-fs d-flex mode-switch align-items-center" id=navbar-mode>
+<input type=checkbox class="checkbox navbar-mode-selector" id=navbar-mode-checkbox aria-label="Toggle theme">
+<label class=label for=navbar-mode-checkbox>
+<svg class="svg-inline--fa fas fa-sun fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-sun"/></svg>
+<svg class="svg-inline--fa fas fa-moon fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-moon"/></svg>
+<div class=ball></div>
+</label>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<main id=container class=main>
+<div class="container-xxl flex-fill py-4 px-4 px-xxl-0">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+<div class="col col-lg-2 d-none d-lg-block sidebar-overflow sticky-top p-0">
+</div>
+<div class="col-12 col-md-9 col-lg-8 mb-5">
+<header>
+<nav aria-label=breadcrumb class=d-sm-none>
+<ol class=breadcrumb>
+<li class=breadcrumb-item>
+<a href=/blog/>
+<svg class="svg-inline--fa fas fa-angle-left" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 256 512" overflow="visible"><use href="#fas-angle-left"/></svg>&nbsp;&nbsp;Blogs
+</a>
+</li></ol>
+</nav>
+<nav aria-label=breadcrumb class="d-none d-sm-block">
+<ol class=breadcrumb>
+<li class=breadcrumb-item><a href=/>Home</a></li>
+<li class=breadcrumb-item><a href=/blog/>Blogs</a></li><li class="breadcrumb-item active" aria-current=page>
+Using BI Publisher RTF templates with Oracle APEX
+</li>
+</ol>
+</nav>
+<h1 id=using-bi-publisher-rtf-templates-with-oracle-apex class="display-4 pt-1">Using BI Publisher RTF templates with Oracle APEX</h1>
+<small class="text-body-secondary text-uppercase">
+Last modified on October 2, 2026
+&bull;
+9&nbsp;min read
+&bull;
+1,742&nbsp;words
+</small>
+<div class="py-3 d-flex align-items-center">
+<span class="hstack gap-2 text-body-secondary">
+<a aria-label="Share via LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-linkedin fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-linkedin"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via Twitter" href="https://twitter.com/home?status=https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-x-twitter fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-x-twitter"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via Facebook" href="https://www.facebook.com/sharer.php?u=https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-facebook fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fab-facebook"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via WhatsApp" href="whatsapp://send?text=Using+BI+Publisher+RTF+templates+with+Oracle+APEX%20https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-whatsapp fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-whatsapp"/></svg>
+</span>
+</span></a>
+<div id=toast-message-email-4 class=toast role=alert aria-live=assertive aria-atomic=true>
+<div class=toast-header>
+<strong class=me-auto>Hinode</strong>
+<button type=button class=btn-close data-bs-dismiss=toast aria-label=Close></button>
+</div>
+<div class=toast-body>Link copied to clipboard</div>
+</div>
+<a aria-label="Share via email" data-toast-target=toast-message-email-4 data-clipboard=https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/ class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fas fa-link fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via system" class="btn btn-primary position-relative btn-social p-0" data-sharing-description data-sharing-title="Using BI Publisher RTF templates with Oracle APEX" data-sharing-url=https://gpmfactory.fr/blog/using-bi-publisher-rtf-templates-with-oracle-apex/ role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fas fa-share-nodes fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-share-nodes"/></svg>
+</span>
+</span></a>
+</span></div>
+</header>
+<div class="d-md-none pb-5">
+<div class="d-grid gap-2 mx-auto">
+<a href=#toc-collapse class="btn btn-outline-secondary position-relative toc-button" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse role=button>
+<span class="d-flex justify-content-between">
+<span class=my-auto>On this page</span>
+<span class="align-self-center ps-1">
+<svg class="svg-inline--fa fas fa-sort" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512" overflow="visible"><use href="#fas-sort"/></svg>
+</span>
+</span></a>
+</div>
+<div class="collapse border bg-body-tertiary rounded p-1 navbar-nav-scroll" id=toc-collapse>
+<small>
+<div class="toc toc-panel text-body p-2">
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#abstract>Abstract</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#materials-documentation>Materials & Documentation</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#prerequisites>Prerequisites</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#implementation>Implementation</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#reminders-about-the-fop-engine>Reminders about the FOP engine</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#install-database-objects>Install database objects</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#adding-a-template-repository>Adding a template repository</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#limitations>Limitations:</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#discussion-about-xml-dataset>Discussion about XML dataset</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#use-cases>Use cases</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#tabular-reports>Tabular reports</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#invoices>Invoices</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#fonts>Fonts</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#conclusion>Conclusion</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#appendix>APPENDIX</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#queries-used-for-invoice-demo>Queries used for invoice demo</a>
+</div>
+</small>
+</div>
+</div>
+<blockquote class=blockquote>
+<p>Leverage the Oracle BI Publisher templating power and produce high fidelity reports</p>
+</blockquote>
+<h2 id=abstract class=heading>Abstract<a href=#abstract aria-labelledby=abstract>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Oracle APEX is a tool which is well suited for rapid applications developpement (RAD). It&rsquo;s possible to produce a tabular report based one a query in a very fast way. This is a standard feature. But when the goal is to build high precision reports &ldquo;pixel perfect&rdquo;, like an invoice, for instance, we must switch to an other approach. The good news is that Oracle APEX gives ability to use XSLT-FO templates instead the standard ones. Perfect ! But how authoring these XSLT-FO templates, while keeping the APEX low code philosophy ? The following in this post explains a possible solution.</p>
+<p>The approach is to use
+<a href=https://www.oracle.com/middleware/technologies/bi-publisher.html>Oracle BI PUblisher</a>
+Desktop product (BIP). It&rsquo;s a plugin for Microsft Word which &ldquo;transforms&rdquo; MS Word in a template authoring tool without burden of with XSLT and XPATH syntax. ( One other alternative is to use
+<a href=https://poi.apache.org/>Apache POI project</a>
+then adding XPATH expressions in the XSL-FO template)<br>
+Important notice: It will be possible to use a functionnal subset of the BIP product but not all features. Therefore, the following informations must be considered as an experimental work only.</p>
+<h2 id=materials-documentation class=heading>Materials & Documentation<a href=#materials-documentation aria-labelledby=materials-documentation>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<h3 id=prerequisites class=heading>Prerequisites<a href=#prerequisites aria-labelledby=prerequisites>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<h4 id=license-prerequisites class=heading>License Prerequisites<a href=#license-prerequisites aria-labelledby=license-prerequisites>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<ul>
+<li>A commercial license for using BI Publisher (BIP)</li>
+<li>A open source license for the SAXON xsl parser</li>
+</ul>
+<p>We&rsquo;ll not rely on BIP FOP engine and we&rsquo;ll just use the BIP Desktop plugin. The license for BIP can be purchased on a <em>Named User</em> metric. That means that we can manage to buy at a <em>low price</em> but with a minimum of 10 licenses per processor.</p>
+<p>SAXON is sold through several editions. The home edition,
+<a href=http://saxon.sourceforge.net/#F9.9HE>SAXON-HE</a>
+is an open source product under Mozilla public license V2. It can be enough for testing and regular use as well.</p>
+<h4 id=download-documentation class=heading>Download & Documentation<a href=#download-documentation aria-labelledby=download-documentation>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<ul>
+<li>Download
+<a href=https://www.oracle.com/middleware/technologies/bi-publisher/downloads.html>BIP desktop</a>
+</li>
+<li>Download
+<a href=http://saxon.sourceforge.net/#F9.9HE>SAXON-HE</a>
+</li>
+<li>Conversion tool
+<a href=https://github.com/patrickmonaco/BIP_TO_FOP>BIP_TO_FOP</a>
+</li>
+</ul>
+<p>Documentation</p>
+<ul>
+<li>
+<a href=https://docs.oracle.com/middleware/12213/bip/BIPRD/GUID-43369E75-4A64-4C70-956D-AB0DB496CA7A.htm#BIPRD2621>BIP Desktop 12.2.1.3</a>
+</li>
+<li>
+<a href=https://www.oracle.com/webfolder/technetwork/tutorials/obe/fmw/bi/bip/tb4word/tbwordbip.htm>RTF templating tutorial</a>
+</li>
+</ul>
+<p>About XPATH and XSLT Syntax, BIP Desktop samples are a good source of inspiration:<br>
+&ldquo;C:\Program Files\Oracle\BI Publisher\BI Publisher Desktop\Template Builder for Word\samples\RTF templates&rdquo;</p>
+<h4 id=technical-prerequisites class=heading>Technical prerequisites<a href=#technical-prerequisites aria-labelledby=technical-prerequisites>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<p>This post assumes a basic knowledge of RTF template design with BIP.<br>
+Once the RTF template is setup, we use the embeded function for exporting the template as an XSL-FO stylesheet.</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-17-2800x1049.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-17-576x216.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-17-768x288.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-17-992x372.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-17-1200x450.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-17-1400x524.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-17-2800x1049.webp 2800w" sizes=100vw height=1049 width=2800 alt=image>
+<p>Export option inside BIP Desktop plugin</p>
+<p>From BIP plugin, an export menu option gives ability to export the template as a XSL-FO stylesheet. This exported stylesheet contains additional xsl function which are specific to BIP and can&rsquo;t be used directly in Oracle APEX. In order to use a regular FO Processor (the one imbedded in APEX), we have to either remove or convert it, when possible.<br>
+For that purpose, we use a simple plsql procedure which will do a kind of cleanup in the template. It&rsquo;is a fork of a Pavel Glebov&rsquo;s project
+<a href=https://github.com/patrickmonaco/BIP_TO_FOP>https://github.com/patrickmonaco/BIP_TO_FOP</a>
+.<br>
+Some additional details have been added.<br>
+The XSL-FO beeing a regular XML document,it would have been ideally more judicious to use a XSLT parsing method, but this discussion is out of the scope of this post.</p>
+<h2 id=implementation class=heading>Implementation<a href=#implementation aria-labelledby=implementation>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<h3 id=reminders-about-the-fop-engine class=heading>Reminders about the FOP engine<a href=#reminders-about-the-fop-engine aria-labelledby=reminders-about-the-fop-engine>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>An Apache FOP engine 2.3 is embedded in the ORDS java application. This engine relies on a XALAN (XSLTC) transformerFactory. This parser is compliant whit XSLT V1 but not XSLT v2. And this is a little bit ennoying for our purpose because some group functions generated by BIP should have to be rewritten for working in XSLT v1. Because we don&rsquo;t want to developp a too complex convert tool, I prefered susbitute for XALAN (XSLTC) an other XSLT parser (SAXON) in order to minimize conversion effort.</p>
+<p>This parser, SAXON, is XSLT v2 compliant . Keep in mind that license fees can be required in some cases.</p>
+<p>So, once we setup the new transformerFactory (new way to transform XML input) in the CATALINA environmement file (if Apache Tomcat is used as a java container) , and after adding SAXON library in Tomcat <em>lib</em> directory, the way becomes much easier.</p>
+<p><code>set CATALINA_OPTS=%CATALINA_OPTS% -Djavax.xml.transform.TransformerFactory=net.sf.saxon.TransformerFactoryImpl</code></p>
+<p>Once the query has been created and the layout has been associated to, the report can be launched with the following URL:<br>
+<code>f?p=&amp;APP_ID.:0:&amp;SESSION.:PRINT_REPORT=empdept</code></p>
+<h3 id=install-database-objects class=heading>Install database objects<a href=#install-database-objects aria-labelledby=install-database-objects>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>A DDL script (FOP_DDL) and a package, BOP_PKG, have to be installed in the worskpace owner schema.<br>
+cf
+<a href=https://github.com/patrickmonaco/BIP_TO_FOP>https://github.com/patrickmonaco/BIP_TO_FOP</a>
+</p>
+<h3 id=adding-a-template-repository class=heading>Adding a template repository<a href=#adding-a-template-repository aria-labelledby=adding-a-template-repository>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>A simple APEX application is provided for
+<a href=https://github.com/patrickmonaco/BIP_TO_FOP/blob/master/f132.sql>managing templates</a>
+. When a new template BIP template is uploaded, a new converted template is created.<br>
+At this stage, the lifecycle is:</p>
+<ul>
+<li>Update/Create RTF template with MS Word & BIP Plugin</li>
+<li>Export RTF template in XSL-FO (with BIP Word Plugin)</li>
+<li>Upload the new version template in BOP repository</li>
+<li>Download the converted template</li>
+<li>Remove the previous layout</li>
+<li>Re-create a new layout with the same name (or not) and upload the converted template</li>
+<li>Update the report query to setup the new layout</li>
+</ul>
+<p>The process is quite cumbersome because on each update, we have to remove then re-create a new layout, then upload the converted wslt-fo template. In order to minimize the tasks, the idea is to synchronise the repository with the apex layouts internal table.<br>
+Note: The following step is optionnal. Remove the related code inside the application if this step is to be ignored.</p>
+<p>The name of this table is: <code>WWV_FLOW_REPORT_LAYOUTS</code><br>
+The pl/sql procedure then updates the layout by uploading the template converted previously. The APEX table is: <code>WWV_FLOW_REPORT_LAYOUTS</code> .<br>
+Full access rights on this table must be granted to the workspace owner.</p>
+<p>As SYS user, let&rsquo;s grant DML on this table</p>
+<div class="codeblock syntax-highlight mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>grant ALL on APEX_&lt;XXX&gt;.WWV_FLOW_REPORT_LAYOUTS TO DEMO;</span></span></code></pre></div></div><p>Now the lifecycle becomes:</p>
+<ul>
+<li>Update RTF template with MS Word</li>
+<li>Export RTF template in XSL-FO (with BIP Word Plugin)</li>
+<li>Upload the new version template in BOP repository</li>
+</ul>
+<p>Because each update in BOP Table will update the conterpart in <code>WWV_FLOW_REPORT_LAYOUTS</code> table, no more effort is needed.</p>
+<h3 id=limitations class=heading>Limitations:<a href=#limitations aria-labelledby=limitations>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<ul>
+<li>Numerous BIP (xdo) functions are not supported</li>
+<li>Wordarts, shapes are not supported</li>
+<li>Static graphics (ie: an image included in the rtf template) encoded in base64 are not supported</li>
+<li>Formatting in XPATH expression is supported for number datatype only</li>
+</ul>
+<h3 id=discussion-about-xml-dataset class=heading>Discussion about XML dataset<a href=#discussion-about-xml-dataset aria-labelledby=discussion-about-xml-dataset>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>Above, this is a XML sample generated by a Report Query.</p>
+<div class="codeblock syntax-highlight mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>select emp.*, 
+</span></span><span class=line><span class=cl>dept.dname, 
+</span></span><span class=line><span class=cl>dept.loc 
+</span></span><span class=line><span class=cl>from emp, dept 
+</span></span><span class=line><span class=cl>where emp.deptno = dept.deptno </span></span></code></pre></div></div>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-2800x3252.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-576x669.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-768x892.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-992x1152.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-1200x1394.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-1400x1626.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-2800x3252.webp 2800w" sizes=100vw height=3252 width=2800 alt=image>
+<p>We can observe that the dataset is rendered as a single table (a single rowset), in other words, a flat tree. There is no way to build, with a regular report query, a complex tree document. The consequence is that we have to use Group Function <strong>inside</strong> the xst-fo template if break page is needed in the final report.</p>
+<p>Therefore, because of the previous point, we&rsquo;ll have to rely on XSLT group function in the plugin, for achieving some behaviours like page break. This point explains why we subsitute to XALAN (XSLTC), the SAXON parser which is more suitable.</p>
+<h2 id=use-cases class=heading>Use cases<a href=#use-cases aria-labelledby=use-cases>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<h3 id=tabular-reports class=heading>Tabular reports<a href=#tabular-reports aria-labelledby=tabular-reports>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>There is no difficulty to design a template which produce a tabular report. It&rsquo;s possible to leverage most of the features of BIP Desktop combined with the powerful of MS Word. The page break is managed by the Apache XSL-FO engine.</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-11-2800x6670.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-11-576x1372.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-11-768x1830.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-11-992x2363.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-11-1200x2859.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-11-1400x3335.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-11-2800x6670.webp 2800w" sizes=100vw height=6670 width=2800 alt=image>
+<p>Tabular output with conditionnal formating</p>
+<h3 id=invoices class=heading>Invoices<a href=#invoices aria-labelledby=invoices>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p>It&rsquo;s a very common type of document where there is :</p>
+<ul>
+<li>a header: (invoice header, customer address, ..)</li>
+<li>one or more set of data multi-lines related to the invoice (product items)</li>
+<li>a footer: total and legal mentions, terms and conditions &mldr;</li>
+</ul>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-2800x2402.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-576x494.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-768x659.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-992x851.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-1200x1029.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-1400x1201.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-2800x2402.webp 2800w" sizes=100vw height=2402 width=2800 alt=image>
+<p>In the context of Oracle APEX, we must keep in mind that the XML output is flat. We just can leverage multiple rowsets in the same report. That leads to two different ways for building the XML dataset. The first one is to get a single rowset by joing all needed data upon a common key (order_id). The second one is to get a first rowset for the header information and other ones for multiple lines data.</p>
+<h4 id=one-occurence-of-a-result-set class=heading>One occurence of a result set<a href=#one-occurence-of-a-result-set aria-labelledby=one-occurence-of-a-result-set>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<p>Goal: print a single document with a single occurence. ie: An invoice for a given order id.</p>
+<p>In this case, the query can contains a single sql statement whichs is a join with all participants tables (order, ords items, products, customer).<br>
+Or we can combine two queries: one for the header ans on another for the order lines.</p>
+<h4 id=all-occurences-of-a-result-set class=heading>All occurences of a result set<a href=#all-occurences-of-a-result-set aria-labelledby=all-occurences-of-a-result-set>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<p>In this case, the goal is to print a single document which contains all occurences returned by a query with an optional page break between occurences.</p>
+<p>Query:</p>
+<div class="codeblock syntax-highlight mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>select emp.*, 
+</span></span><span class=line><span class=cl>dept.dname, 
+</span></span><span class=line><span class=cl>dept.loc 
+</span></span><span class=line><span class=cl>from emp, dept 
+</span></span><span class=line><span class=cl>where emp.deptno = dept.deptno </span></span></code></pre></div></div><p>Oracle APEX generates a XML document with the following schema:</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-1-2800x2722.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-1-576x560.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-1-768x747.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-1-992x965.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-1-1200x1167.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-1-1400x1361.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-1-2800x2722.webp 2800w" sizes=100vw height=2722 width=2800 alt=image>
+<p>XML schema generated by APEX Report Query</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-2-2800x4571.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-2-576x940.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-2-768x1254.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-2-992x1619.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-2-1200x1959.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-2-1400x2286.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-2-2800x4571.webp 2800w" sizes=100vw height=4571 width=2800 alt=image>
+<p>Output pdf with page break on Department</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-3-2800x1546.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-3-576x318.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-3-768x424.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-3-992x548.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-3-1200x663.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-3-1400x773.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-3-2800x1546.webp 2800w" sizes=100vw height=1546 width=2800 alt=image>
+<p>BIP RTF template</p>
+<h2 id=fonts class=heading>Fonts<a href=#fonts aria-labelledby=fonts>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Using specific fonts requires some additionnal setup. We need to adapt ORDS starting parameters.<br>
+A parameter in ORDS configuration file must be modified for pointing to the FOP configuration file:</p>
+<p><code>&lt;entry key="**fop.configfile**"></code><br>
+<code>X:\distrib\fop-2.2\fop\conf\fopapex.xconf</code><br>
+<code>&lt;/entry></code></p>
+<p>Once the server has been restarted, all the requierd fonts will be honored by Apache FOP. Otherwise, there is a fallback mechanism which maps the original fonts on a small subset (Times Roman).</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-16-2800x2388.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-16-576x491.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-16-768x655.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-16-992x846.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-16-1200x1024.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-16-1400x1194.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-16-2800x2388.webp 2800w" sizes=100vw height=2388 width=2800 alt=image>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-12-2800x1673.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-12-576x344.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-12-768x459.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-12-992x593.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-12-1200x717.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-12-1400x837.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-12-2800x1673.webp 2800w" sizes=100vw height=1673 width=2800 alt=image>
+<p>Fonts embedded by the pdf document with fonts</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-13-2800x2312.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-13-576x476.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-13-768x634.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-13-992x819.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-13-1200x991.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-13-1400x1156.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-13-2800x2312.webp 2800w" sizes=100vw height=2312 width=2800 alt=image>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-14-2800x1402.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-14-576x288.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-14-768x385.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-14-992x497.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-14-1200x601.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-14-1400x701.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-14-2800x1402.webp 2800w" sizes=100vw height=1402 width=2800 alt=image>
+<p>Fonts embedded in the output pdf without fonts</p>
+<h2 id=conclusion class=heading>Conclusion<a href=#conclusion aria-labelledby=conclusion>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>The method presented previously shows up a good balance between complexity/High quality and simplicity/basic rendition in pdf document design. The BIP desktop plugin gives a very good flexibility provided you get a correct knowledge of MS Word.</p>
+<h2 id=appendix class=heading>APPENDIX<a href=#appendix aria-labelledby=appendix>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>The following sample gives an overview of the XPATH query wich is generated by the BIP desktop plugin. Of course, it&rsquo;s always possible to enrich the behavior by adding some additional XPATH expressions.</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-4-2800x1298.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-4-576x267.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-4-768x356.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-4-992x460.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-4-1200x556.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-4-1400x649.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-4-2800x1298.webp 2800w" sizes=100vw height=1298 width=2800 alt=image>
+<p>XPATH generated by BIP Desktop plugin</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-5-2800x1377.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-5-576x283.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-5-768x378.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-5-992x488.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-5-1200x590.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-5-1400x689.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-5-2800x1377.webp 2800w" sizes=100vw height=1377 width=2800 alt=image>
+<p>PDF output with the FOP engine / report with XSLT break</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-2800x2402.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-576x494.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-768x659.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-992x851.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-1200x1029.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-1400x1201.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-9-2800x2402.webp 2800w" sizes=100vw height=2402 width=2800 alt=image>
+<p>PDF output with the APEX FOP engine - Master detail</p>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-8-2800x2694.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-8-576x554.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-8-768x739.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-8-992x955.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-8-1200x1155.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-8-1400x1347.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-8-2800x2694.webp 2800w" sizes=100vw height=2694 width=2800 alt=image>
+<p>Simple Invoice RTF template in BIP desktop</p>
+<h3 id=queries-used-for-invoice-demo class=heading>Queries used for invoice demo<a href=#queries-used-for-invoice-demo aria-labelledby=queries-used-for-invoice-demo>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<h4 id=multi-queries-two-rowsets class=heading>Multi-queries - two rowsets<a href=#multi-queries-two-rowsets aria-labelledby=multi-queries-two-rowsets>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<div class="codeblock syntax-highlight mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>select  o.order_id,  o.customer_id, o.order_total, to_char(o.order_timestamp,&#39;DD MONTH YYYY&#39;) order_timestamp, c.cust_first_name, c.cust_last_name, c.cust_street_address1, c.cust_street_address2, c.cust_city, c.cust_state, c.cust_postal_code from demo_orders o, demo_customers c where c.customer_id = o.customer_id and o.order_id = 1select  i.unit_price, i.quantity, round((i.quantity * i.unit_price),2) amount, p.product_name, p.product_description from  demo_order_items i, demo_product_info p where p.product_id = i.product_id and i.order_id=1</span></span></code></pre></div></div>
+<img class=img-fluid src=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-10-1024x718-2800x1963.png srcset="/blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-10-1024x718-576x404.webp 576w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-10-1024x718-768x539.webp 768w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-10-1024x718-992x696.webp 992w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-10-1024x718-1200x841.webp 1200w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-10-1024x718-1400x982.webp 1400w, /blog/using-bi-publisher-rtf-templates-with-oracle-apex/images/image-10-1024x718-2800x1963.webp 2800w" sizes=100vw height=1963 width=2800 alt=image>
+<p>Sample multiple queries (rowsets)</p>
+<h4 id=single-query-single-rowset class=heading>Single Query - single rowset<a href=#single-query-single-rowset aria-labelledby=single-query-single-rowset>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h4>
+<div class="codeblock syntax-highlight mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>select 
+</span></span><span class=line><span class=cl> o.order_id, 
+</span></span><span class=line><span class=cl> o.customer_id,
+</span></span><span class=line><span class=cl> o.order_total,
+</span></span><span class=line><span class=cl> o.order_timestamp,
+</span></span><span class=line><span class=cl> i.unit_price,
+</span></span><span class=line><span class=cl> i.quantity,
+</span></span><span class=line><span class=cl> p.product_name,
+</span></span><span class=line><span class=cl> p.product_description,
+</span></span><span class=line><span class=cl> c.cust_first_name,
+</span></span><span class=line><span class=cl> c.cust_last_name,
+</span></span><span class=line><span class=cl> c.cust_street_address1,
+</span></span><span class=line><span class=cl> c.cust_street_address2,
+</span></span><span class=line><span class=cl> c.cust_city,
+</span></span><span class=line><span class=cl> c.cust_state,
+</span></span><span class=line><span class=cl> c.cust_postal_code
+</span></span><span class=line><span class=cl> from demo_orders o,
+</span></span><span class=line><span class=cl> demo_order_items i,
+</span></span><span class=line><span class=cl> demo_customers c,
+</span></span><span class=line><span class=cl> demo_product_info p
+</span></span><span class=line><span class=cl> where o.order_id = i.order_id and
+</span></span><span class=line><span class=cl> p.product_id = i.product_id and
+</span></span><span class=line><span class=cl> c.customer_id = o.customer_id</span></span></code></pre></div></div>
+<div class="row row-cols-2 mt-5 mb-3">
+<div class=col><a class=page-nav-prev href=/blog/upload-multiple-fmx-files-into-oracle-apex/>
+<span class=visually-hidden>Previous page:&nbsp;</span>
+<svg class="svg-inline--fa fas fa-arrow-left" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-arrow-left"/></svg>&nbsp;Upload multiple FMX files into ORACLE APEX
+</a></div>
+<div class="col text-end"><a class=page-nav-next href=/blog/using-display-map-item-with-latitude-and-longitude/>
+<span class=visually-hidden>Next page:&nbsp;</span>Using Display Map item with latitude and longitude&nbsp;
+<svg class="svg-inline--fa fas fa-arrow-right" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-arrow-right"/></svg>
+</a></div>
+</div>
+</div>
+<div class="col col-md-3 col-lg-2 d-none d-md-block">
+<div class="toc toc-sidebar mb-5 my-md-0 mb-lg-5 pb-3 text-body-secondary sticky-top">
+<h2 class="h6 fw-bold lh-base mt-0 mb-2" id=toc-heading>On this page</h2>
+<nav class=toc aria-labelledby=toc-heading>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#abstract>Abstract</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#materials-documentation>Materials & Documentation</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#prerequisites>Prerequisites</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#implementation>Implementation</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#reminders-about-the-fop-engine>Reminders about the FOP engine</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#install-database-objects>Install database objects</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#adding-a-template-repository>Adding a template repository</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#limitations>Limitations:</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#discussion-about-xml-dataset>Discussion about XML dataset</a>
+<a href=#toc-collapse-items id=btnTOCShowMore class="btn btn-link link-primary position-relative toc-item" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse-items role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Show 7 more</span>
+</span></a>
+<div class=collapse id=toc-collapse-items>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#use-cases>Use cases</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#tabular-reports>Tabular reports</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#invoices>Invoices</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#fonts>Fonts</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#conclusion>Conclusion</a>
+<a class="toc-item toc-level-1" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#appendix>APPENDIX</a>
+<a class="toc-item toc-level-2" href=/blog/using-bi-publisher-rtf-templates-with-oracle-apex/#queries-used-for-invoice-demo>Queries used for invoice demo</a>
+&nbsp;
+<a href=#toc-collapse-items id=btnTOCShowLess class="btn btn-link link-primary position-relative toc-item" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse-items role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Show less</span>
+</span></a>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</main><div class="container-fluid bg-primary bg-opacity-10">
+<div class="container-xxl px-4 px-xxl-0">
+<div class="row row-cols-2 py-3 align-items-center">
+<div class="col col-6">
+<div class="row justify-content-end p-0">
+<div class="col-12 col-md-8 p-0">
+<div class="fs-3 fw-bold">Follow me</div>
+<p>I work on everything coding and tweet developer memes</p>
+</div>
+</div>
+</div>
+<div class="col col-6 text-sm-start">
+<a href=https://linkedin.com/ aria-label=LinkedIn class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-linkedin fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-linkedin"/></svg>&nbsp;
+</a>
+<a href=https://github.com/ aria-label=GitHub class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-github fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fab-github"/></svg>&nbsp;
+</a>
+<a href=https://medium.com/ aria-label=Medium class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-medium fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-medium"/></svg>&nbsp;
+</a>
+</div>
+</div>
+</div>
+</div>
+<footer class="container-fluid footer text-center p-3">
+<div class="container-xxl text-center">
+<small>
+Copyright © 2022 - 2026 Hinode Team.
+|
+Powered by
+<a href=https://gethinode.com class=link-bg-footer>Hinode</a>
+</small>
+</div>
+</footer><div id=toast-container class="toast-container position-fixed bottom-0 end-0 p-3">
+<div id=toast-copied-code-message class=toast role=alert aria-live=assertive aria-atomic=true>
+<div class=toast-header>
+<strong class=me-auto>Hinode</strong>
+<button type=button class=btn-close data-bs-dismiss=toast aria-label=Close></button>
+</div>
+<div class=toast-body>Code copied to clipboard</div>
+</div>
+</div>
+<dialog class=lightbox aria-label="Enlarged view">
+<button type=button class=lightbox-close aria-label=Close>
+<svg class="svg-inline--fa fas fa-xmark fa-fw fa-xl" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512" overflow="visible"><use href="#fas-xmark"/></svg></button>
+<div class=lightbox-content></div>
+</dialog>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" display="none"><symbol id="fab-facebook" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M512 256C512 114.6 397.4.0 256 0S0 114.6.0 256C0 376 82.7 476.8 194.2 504.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2.0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></symbol><symbol id="fab-github" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5.0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5.0S0 115.5.0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5.0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21z"/></symbol><symbol id="fab-linkedin" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3V447.7C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3C448 46.5 433.6 32 416 32zM135.4 416H69V202.2h66.5V416h-.1zM102.2 96a38.5 38.5.0 110 77 38.5 38.5.0 110-77zM384.3 416h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></symbol><symbol id="fab-medium" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M369.4 32c43.4.0 78.6 35.2 78.6 78.6v83.8c-1.9-.1-3.8-.2-5.7-.2h-.4c-10 0-22.3 2.4-31.1 6.8-10 4.6-18.7 11.5-26 20.6-11.8 14.6-18.9 34.3-20.6 56.4-.1.7-.1 1.3-.2 2s-.1 1.2-.1 1.9c-.1 1.2-.1 2.4-.1 3.6.0 1.9-.1 3.8.0 5.8 1.2 50.1 28.2 90.2 76.3 90.2 2.7.0 5.3-.1 7.9-.4v20.4c0 43.4-35.2 78.6-78.6 78.6L78.6 480C35.2 480 0 444.8.0 401.4V110.6C0 67.2 35.2 32 78.6 32h290.8zM82.3 138.9l.3.1c13.2 3 19.8 7.4 19.8 23.4v187.2c0 16-6.7 20.4-19.9 23.4l-.3.1v2.8H135v-2.8l-.3-.1c-13.2-3-19.9-7.4-19.9-23.4V173.3l86.1 202.5h4.9l88.6-208.2v186.6c-1.1 12.6-7.8 16.5-19.7 19.2l-.3.1v2.7h91.9v-2.7l-.3-.1c-11.9-2.7-18.7-6.6-19.9-19.2l-.1-191.8h.1c0-16 6.7-20.4 19.9-23.4l.3-.1v-2.7h-72.2l-67 157.4-67-157.4H82.3v2.7zM448 340.3c-25.1-7.4-43-35.1-41.2-67.8h41.1v67.8zm-6.4-135.6c2.3.0 4.4.3 6.4.9V263h-40.2c1.5-33.6 13.6-57.9 33.8-58.3z"/></symbol><symbol id="fab-whatsapp" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4.0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3.0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2.0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2.0-101.7 82.8-184.5 184.6-184.5 49.3.0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></symbol><symbol id="fab-x-twitter" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8L168.7 275.5-5.2 48H140.4L240.9 180.9 357.2 48zM332.4 421.8h39.1L119.1 88h-42l255.3 333.8z"/></symbol><symbol id="fas-angle-left" overflow="visible" viewBox="0 0 256 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8.0 45.3l160 160c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0l-160 160z"/></symbol><symbol id="fas-arrow-left" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8.0 45.3l160 160c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L109.3 288H480c17.7.0 32-14.3 32-32s-14.3-32-32-32H109.3l105.4-105.4c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0l-160 160z"/></symbol><symbol id="fas-arrow-right" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8.0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3.0s-12.5 32.8.0 45.3L402.7 224H32c-17.7.0-32 14.3-32 32s14.3 32 32 32h370.7L297.3 393.4c-12.5 12.5-12.5 32.8.0 45.3s32.8 12.5 45.3.0l160-160z"/></symbol><symbol id="fas-ellipsis" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M0 256a56 56 0 11112 0A56 56 0 110 256zm168 0a56 56 0 11112 0 56 56 0 11-112 0zm224-56a56 56 0 110 112 56 56 0 110-112z"/></symbol><symbol id="fas-link" overflow="visible" viewBox="0 0 576 512"><path fill="currentColor" d="M419.5 96c-16.6.0-32.7 4.5-46.8 12.7-15.8-16-34.2-29.4-54.5-39.5 28.2-24 64.1-37.2 101.3-37.2C505.9 32 576 102 576 188.5c0 41.5-16.5 81.3-45.8 110.6l-71.1 71.1C429.8 399.5 390 416 348.5 416 262.1 416 192 346 192 259.5c0-1.5.0-3 .1-4.5.5-17.7 15.2-31.6 32.9-31.1s31.6 15.2 31.1 32.9c0 .9.0 1.8.0 2.6.0 51.1 41.4 92.5 92.5 92.5 24.5.0 48-9.7 65.4-27.1l71.1-71.1c17.3-17.3 27.1-40.9 27.1-65.4.0-51.1-41.4-92.5-92.5-92.5zM275.2 173.3c-1.9-.8-3.8-1.9-5.5-3.1-12.6-6.5-27-10.2-42.1-10.2-24.5.0-48 9.7-65.4 27.1L91.1 258.2C73.8 275.5 64 299.1 64 323.6c0 51.1 41.4 92.5 92.5 92.5 16.5.0 32.6-4.4 46.7-12.6 15.8 16 34.2 29.4 54.6 39.5-28.2 23.9-64 37.2-101.3 37.2C70.1 480.2.0 410.2.0 323.7c0-41.5 16.5-81.3 45.8-110.6l71.1-71.1c29.3-29.3 69.1-45.8 110.6-45.8 86.6.0 156.5 70.6 156.5 156.9.0 1.3.0 2.6.0 3.9-.4 17.7-15.1 31.6-32.8 31.2s-31.6-15.1-31.2-32.8c0-.8.0-1.5.0-2.3.0-33.7-18-63.3-44.8-79.6z"/></symbol><symbol id="fas-moon" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6.0.0 114.6.0 256S114.6 512 256 512c68.8.0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9.4-9.8.6-14.8.6-101.6.0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4S322.6 8.5 312.7 6.3C294.4 2.2 275.4.0 256 0z"/></symbol><symbol id="fas-share-nodes" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M384 192c53 0 96-43 96-96S437 0 384 0s-96 43-96 96c0 5.4.5 10.8 1.3 16L159.6 184.1c-16.9-15-39.2-24.1-63.6-24.1-53 0-96 43-96 96s43 96 96 96c24.4.0 46.6-9.1 63.6-24.1L289.3 4e2c-.9 5.2-1.3 10.5-1.3 16 0 53 43 96 96 96s96-43 96-96-43-96-96-96c-24.4.0-46.6 9.1-63.6 24.1L190.7 272c.9-5.2 1.3-10.5 1.3-16s-.5-10.8-1.3-16l129.7-72.1c16.9 15 39.2 24.1 63.6 24.1z"/></symbol><symbol id="fas-sort" overflow="visible" viewBox="0 0 384 512"><path fill="currentColor" d="M2.4 204.2C7.4 216.2 19 224 32 224h320c12.9.0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-160-160c-12.5-12.5-32.8-12.5-45.3.0l-160 160c-9.2 9.2-11.9 22.9-6.9 34.9zm0 103.5c-5 12-2.2 25.7 6.9 34.9l160 160c12.5 12.5 32.8 12.5 45.3.0l160-160c9.2-9.2 11.9-22.9 6.9-34.9S364.9 288 352 288H32c-12.9.0-24.6 7.8-29.6 19.8z"/></symbol><symbol id="fas-sun" overflow="visible" viewBox="0 0 576 512"><path fill="currentColor" d="M288-32c8.4.0 16.3 4.4 20.6 11.7l55.5 92.6L468.9 46c8.2-2 16.9.4 22.8 6.3S5e2 67 498 75.1l-26.3 104.7 92.7 55.5c7.2 4.3 11.7 12.2 11.7 20.6s-4.4 16.3-11.7 20.6l-92.7 55.6L498 436.8c2 8.2-.4 16.9-6.3 22.8S477 468 468.9 466l-104.7-26.3-55.5 92.7c-4.3 7.2-12.2 11.7-20.6 11.7s-16.3-4.4-20.6-11.7L211.9 439.7 107.2 466c-8.2 2-16.8-.4-22.8-6.3S76 445 78 436.8l26.2-104.7-92.6-55.5C4.4 272.2.0 264.4.0 256s4.4-16.3 11.7-20.6l92.6-55.5L78 75.1c-2-8.2.3-16.8 6.3-22.8S99 44 107.2 46l104.7 26.2 55.5-92.6 1.8-2.6c4.5-5.7 11.4-9.1 18.8-9.1zm0 144a144 144 0 100 288 144 144 0 100-288zm0 240a96 96 0 110-192 96 96 0 110 192z"/></symbol><symbol id="fas-xmark" overflow="visible" viewBox="0 0 384 512"><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3.0s-12.5 32.8.0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8.0 45.3s32.8 12.5 45.3.0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0L192.5 210.7 55.1 73.4z"/></symbol></svg>
+<script src=/js/core.bundle.en.378f11853928e62e422b122cf3fb703f2ebb80d353451c2c8ec304d70a125bfc.js integrity="sha256-N48RhTko5i5CKxIs8/twPy67gNNTRRwsjsME1woSW/w=" crossorigin=anonymous defer></script>
+<script src=/js/core.bundle.en.a00f94c296574cfee65e112d82eb3b22b3a4afb097b9f59787a25d401459cdd9.mjs type=module integrity="sha256-oA+UwpZXTP7mXhEtgus7IrOkr7CXufWXh6JdQBRZzdk=" crossorigin=anonymous defer></script></body>
+</html>
